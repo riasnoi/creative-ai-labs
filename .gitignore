@@ -1,0 +1,24 @@
+# Local environments and Python cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Repeat runs and report drafts; keep submitted artifacts under version control
+.runs/
+.local-backup/
+dist/
+
+# OS and Word temporary files
+.DS_Store
+Thumbs.db
+~$*
+*.tmp
+
+# Local settings and credentials
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/

@@ -1,0 +1,2 @@
+# Optional document builder only. The experiment itself uses the standard library.
+python-docx==1.2.0

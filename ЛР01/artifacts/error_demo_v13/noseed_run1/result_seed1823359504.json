@@ -1,0 +1,17 @@
+{
+  "seed": 1823359504,
+  "params": {
+    "size": 96,
+    "cell": 32,
+    "octaves": 4,
+    "persistence": 0.5,
+    "quantize": 8,
+    "interp": "smooth"
+  },
+  "sha256_pixels": "17c1c33f24ddfa5f841f6683cf2fb62bdfe57fa70174d29049d402f2c55970bf",
+  "sha256_png": "722838562ce7e1a79fa5c10cfc6f67a557535b7fa01e9bf641b5d9905fff9f98",
+  "mean": 0.5216039453976035,
+  "contrast": 0.12037472194675626,
+  "edge": 0.010663484692122463,
+  "entropy": 6.940009382984812
+}

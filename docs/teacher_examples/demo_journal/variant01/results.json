@@ -1,0 +1,163 @@
+{
+  "date": "2026-09-18 22:12:28 UTC",
+  "variant": 1,
+  "context": "clouds",
+  "context_title": "облачное небо (фон афиши)",
+  "factor": "size",
+  "factor_title": "размер изображения ×1,5",
+  "base_seed": 101,
+  "n": 5,
+  "seeds_repro": [
+    101,
+    101,
+    1101,
+    101
+  ],
+  "eq": {
+    "EQ_1_2": true,
+    "EQ_1_4": true,
+    "EQ_1_3": false,
+    "EQ_2_4": true
+  },
+  "eq_png": {
+    "EQ_1_2_png": true
+  },
+  "params_base": {
+    "size": 96,
+    "cell": 32,
+    "octaves": 4,
+    "persistence": 0.5,
+    "quantize": 8,
+    "interp": "smooth"
+  },
+  "params_perturbed": {
+    "size": 144,
+    "cell": 32,
+    "octaves": 4,
+    "persistence": 0.5,
+    "quantize": 8,
+    "interp": "smooth"
+  },
+  "runs_repro": [
+    {
+      "seed": 101,
+      "params": {
+        "size": 96,
+        "cell": 32,
+        "octaves": 4,
+        "persistence": 0.5,
+        "quantize": 8,
+        "interp": "smooth"
+      },
+      "sha256_pixels": "93fae5913d79728429ddcdf533063672739fd51e5afa6a7ac243e3e6a80d290b",
+      "sha256_png": "9779f1fe26d3815c5663d067f4b3454c0be748ce6e64f18bf79366cfb0051b59",
+      "mean": 0.4502076525054466,
+      "contrast": 0.1334127822998053,
+      "edge": 0.010212848297213622,
+      "entropy": 7.040183729460281
+    },
+    {
+      "seed": 101,
+      "params": {
+        "size": 96,
+        "cell": 32,
+        "octaves": 4,
+        "persistence": 0.5,
+        "quantize": 8,
+        "interp": "smooth"
+      },
+      "sha256_pixels": "93fae5913d79728429ddcdf533063672739fd51e5afa6a7ac243e3e6a80d290b",
+      "sha256_png": "9779f1fe26d3815c5663d067f4b3454c0be748ce6e64f18bf79366cfb0051b59",
+      "mean": 0.4502076525054466,
+      "contrast": 0.1334127822998053,
+      "edge": 0.010212848297213622,
+      "entropy": 7.040183729460281
+    },
+    {
+      "seed": 1101,
+      "params": {
+        "size": 96,
+        "cell": 32,
+        "octaves": 4,
+        "persistence": 0.5,
+        "quantize": 8,
+        "interp": "smooth"
+      },
+      "sha256_pixels": "79aa3ff4187bbfe82959dec1a542c82e7143d035dc7641ab0827855fc36d4fd2",
+      "sha256_png": "68cab27fecf9d4a005b90805a6f4a91388660242d13e4290be807586e3b0a407",
+      "mean": 0.48697703907952067,
+      "contrast": 0.11957528475072923,
+      "edge": 0.0105671654626763,
+      "entropy": 6.883510322409739
+    },
+    {
+      "seed": 101,
+      "params": {
+        "size": 96,
+        "cell": 32,
+        "octaves": 4,
+        "persistence": 0.5,
+        "quantize": 8,
+        "interp": "smooth"
+      },
+      "sha256_pixels": "93fae5913d79728429ddcdf533063672739fd51e5afa6a7ac243e3e6a80d290b",
+      "sha256_png": "9779f1fe26d3815c5663d067f4b3454c0be748ce6e64f18bf79366cfb0051b59",
+      "mean": 0.4502076525054466,
+      "contrast": 0.1334127822998053,
+      "edge": 0.010212848297213622,
+      "entropy": 7.040183729460281
+    }
+  ],
+  "metrics_table": {
+    "mean": {
+      "mean_base": 0.4781768280228758,
+      "s_base": 0.04814959775415796,
+      "mean_pert": 0.495187908496732,
+      "s_pert": 0.017200902424530044,
+      "delta": 0.01701108047385619,
+      "delta_over_s": 0.35329641922890614,
+      "significant": false
+    },
+    "contrast": {
+      "mean_base": 0.13114398494945967,
+      "s_base": 0.010227530713291551,
+      "mean_pert": 0.12540489036759866,
+      "s_pert": 0.01467500992377079,
+      "delta": -0.005739094581861004,
+      "delta_over_s": 0.5611417597018369,
+      "significant": false
+    },
+    "edge": {
+      "mean_base": 0.009734090127278982,
+      "s_base": 0.0005682455056593576,
+      "mean_pert": 0.009970443499855266,
+      "s_pert": 0.0004732159802905193,
+      "delta": 0.00023635337257628397,
+      "delta_over_s": 0.4159353135614049,
+      "significant": false
+    },
+    "entropy": {
+      "mean_base": 6.996888420504829,
+      "s_base": 0.12635727280063788,
+      "mean_pert": 6.966360699906178,
+      "s_pert": 0.16382845634964827,
+      "delta": -0.030527720598651165,
+      "delta_over_s": 0.24159844480670886,
+      "significant": false
+    }
+  },
+  "significance_rule": "|Δ| > 2.0·s_base",
+  "env": {
+    "python": "3.13.7",
+    "implementation": "CPython",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "machine": "AMD64",
+    "zlib": "1.3.1",
+    "generator_version": "1.0",
+    "third_party_packages": "не используются (стандартная библиотека)"
+  },
+  "script_sha256": {
+    "lab01_generator.py": "8f07d340a5a765a8e44f1fec407489cf00114ba54216aa7539c4e7116680e152",
+    "lab01_experiment.py": "69257206dab50ef35de448b45764daad0d4f60dbc98febd8953c6faee28e06b5"
+  }
+}

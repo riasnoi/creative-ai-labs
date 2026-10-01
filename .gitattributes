@@ -1,0 +1,17 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+*.ngscript text eol=lf
+*.log text eol=lf
+*.png binary
+*.docx binary
+*.pdf binary
+*.zip binary
+# Keep the exact bytes of teaching scripts used by the recorded experiment.
+ЛР01/src/lab01_generator.py -text
+ЛР01/src/lab01_experiment.py -text
+# Preserve the original teaching materials, including CRLF line endings.
+docs/teacher_examples/demo_journal/** -text
+ЛР01/variants_lr01.json -text
