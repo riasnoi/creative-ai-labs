@@ -1,0 +1,8 @@
+{
+  "method_docx_sha256": "dea3117f9a537def46b6de29fa55ef0cd357af78b41bbd19ef73d688aed9e76f",
+  "archive_sha256": "42c47347f7a3a11645d80ae318baefd1f0c0d93308e0e33061d62f1d87da4c69",
+  "original_library_sha256": "cd1622643e7cfe7cc01bb7d8067e4802a76f6a76e9a6833ba4c09c84bb9fa62a",
+  "original_library_bytes": 5027,
+  "library_version": "ЛР03, материалы 19.09.2026; отдельная версия не задана",
+  "changes": "Учебная библиотека сохранена без изменений. Расчёт и экспорт реализуются отдельным скриптом."
+}

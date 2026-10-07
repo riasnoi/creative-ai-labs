@@ -1,0 +1,211 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "metadata": {
+    "kernelspec": {
+      "name": "ijulia-1.9",
+      "display_name": "IJulia 1.9.3",
+      "language": "julia"
+    },
+    "language_info": {
+      "name": "julia",
+      "file_extension": ".jl",
+      "version": "1.9.3"
+    },
+    "engee": {}
+  },
+  "cells": [
+    {
+      "id": "9b634b2f",
+      "cell_type": "code",
+      "source": [
+        "# ЛР 3. Подготовка изображений и визуализация в Engee. Библиотека учебных функций.\n# Среда проверки: Engee 26.8.2-H3, Julia 1.12.4 (19.09.2026). Требуются пакеты Images, Random, Statistics, SHA.\n# Тексты функций ниже вводились в командную строку Engee без комментариев; файл целиком через include автором не запускался.\n\nusing Images, Random, Statistics, SHA\n\n# Синтетическая сцена: диагональный градиент + круг + (необязательно) шахматная структура + гауссов шум.\n# Все случайные числа берутся из локального генератора MersenneTwister(seed).\nfunction make_scene(seed::Integer; n::Int=128, lo::Float64=0.15, hi::Float64=0.85, noise::Float64=0.02, checker::Int=0)\n    rng = MersenneTwister(seed)\n    img = Array{RGB{Float64}}(undef, n, n)\n    c, rad = n ÷ 2, n ÷ 4\n    for i in 1:n, j in 1:n\n        t = (i + j) / (2n)\n        r = lo + (hi - lo) * t\n        g = lo + (hi - lo) * (1 - t)\n        b = lo + (hi - lo) * j / n\n        if checker > 0 && (div(i - 1, checker) + div(j - 1, checker)) % 2 == 0\n            m = (r + g + b) / 3\n            r, g, b = m, m, m\n        end\n        if (i - c)^2 + (j - c)^2 <= rad^2\n            r, g, b = hi, lo, lo\n        end\n        img[i, j] = RGB(clamp(r + noise * randn(rng), 0, 1), clamp(g + noise * randn(rng), 0, 1), clamp(b + noise * randn(rng), 0, 1))\n    end\n    return img\nend\n\n# Свойства изображения: размер, тип элемента, диапазон значений, объём массива в байтах.\ndescribe_image(img) = (size = size(img), eltype = string(eltype(img)), min = Float64(minimum(channelview(img))), max = Float64(maximum(channelview(img))), bytes = sizeof(img))\n\n# Яркость: Rec.601 «вручную» и стандартным преобразованием Images (значения Float64 в [0,1]).\nluma_manual(img) = [0.299 * red(p) + 0.587 * green(p) + 0.114 * blue(p) for p in img]\nluma_images(img) = Float64.(Gray.(img))\n\n# Квантование яркости [0,1] до заданного числа бит и обратно.\nquantize(x::AbstractArray, bits::Int) = round.(x .* (2^bits - 1)) ./ (2^bits - 1)\n\n# Среднеквадратичная ошибка и PSNR в дБ для массивов [0,1] (maxval = 1).\nmse(a, b) = mean((Float64.(a) .- Float64.(b)) .^ 2)\npsnr_db(a, b) = (m = mse(a, b); m == 0 ? Inf : 10 * log10(1 / m))\n\n# Контрольная сумма массива (SHA-256 по байтам Float64) — для проверки воспроизводимости.\narray_sha(x::AbstractArray) = bytes2hex(sha256(reinterpret(UInt8, vec(Float64.(x)))))\n\n# Гистограмма в bins равных интервалах [0,1] и энтропия гистограммы (бит на отсчёт).\nhist_counts(x::AbstractArray, bins::Int) = (cn = zeros(Int, bins); for v in x; k = min(bins, max(1, ceil(Int, v * bins))); cn[k] += 1; end; cn)\nhist_entropy(x::AbstractArray, bins::Int) = (cn = hist_counts(x, bins); pr = cn ./ sum(cn); -sum(q * log2(q) for q in pr if q > 0))\n\n# Пять сцен (контексты вариантов) и шесть воздействий (факторы вариантов).\nscene_preset(c) = c == 1 ? (lo=0.15, hi=0.85, noise=0.02, checker=0) : c == 2 ? (lo=0.40, hi=0.60, noise=0.02, checker=0) : c == 3 ? (lo=0.02, hi=0.30, noise=0.02, checker=0) : c == 4 ? (lo=0.15, hi=0.85, noise=0.08, checker=0) : (lo=0.15, hi=0.85, noise=0.02, checker=8)\npng_roundtrip(g) = (p = joinpath(tempdir(), \"lab03_rt.png\"); save(p, Gray{N0f8}.(g)); Float64.(load(p)))\napply_factor(g, k) = k == 1 ? quantize(g, 4) : k == 2 ? imresize(imresize(g, ratio=0.5), size(g)) : k == 3 ? imresize(imresize(g, ratio=0.25), size(g)) : k == 4 ? (g .- minimum(g)) ./ (maximum(g) - minimum(g)) : k == 5 ? g .^ 0.5 : png_roundtrip(g)\nmetrics3(x) = (mean = mean(x), contrast = std(x), entropy = hist_entropy(x, 32))\n\n# Сводка варианта n = 1..30 по серии seed: для метрик mean, contrast, entropy — база, разброс s, значение после воздействия, Δ, |Δ|/s, признак |Δ| > 2s.\nfunction variant_summary(n; seeds=101:105)\n    q, r = divrem(n - 1, 6); c, f = q + 1, r + 1\n    mb = []; ma = []; ps = Float64[]\n    for s in seeds\n        g = luma_images(make_scene(s; scene_preset(c)...)); h = apply_factor(g, f)\n        push!(mb, metrics3(g)); push!(ma, metrics3(h)); push!(ps, psnr_db(g, h))\n    end\n    out = Any[]\n    for m in (:mean, :contrast, :entropy)\n        b = [x[m] for x in mb]; a = [x[m] for x in ma]\n        d = mean(a) - mean(b); sb = std(b)\n        push!(out, (m, mean(b), sb, mean(a), d, abs(d) / sb, abs(d) > 2 * sb))\n    end\n    return (variant=n, ctx=c, fac=f, psnr=mean(ps), rows=out)\nend\n"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "variant_summary (generic function with 1 method)"
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ],
+      "metadata": {
+        "name": "Учебная библиотека",
+        "engee": {
+          "isDisplay": true,
+          "isParagraph": false,
+          "isClosedParagraph": false,
+          "amountHideCellsInside": 0,
+          "codeOutputView": "col",
+          "codeOutputHidden": false,
+          "outputInfo": {
+            "isExpanded": false,
+            "scrollTop": 0
+          },
+          "maskInfo": {
+            "isMaskVisible": true,
+            "isEditorVisible": true,
+            "isAutoplayActive": false
+          }
+        }
+      }
+    },
+    {
+      "id": "0faa1fb1",
+      "cell_type": "code",
+      "source": [
+        "make_scene(101) |> describe_image"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "(size = (128, 128), eltype = \"RGB{Float64}\", min = 0.08115622264322489, max = 0.9185814096363565, bytes = 393216)"
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ],
+      "metadata": {
+        "name": "Проверка библиотеки",
+        "engee": {
+          "isDisplay": true,
+          "isParagraph": false,
+          "isClosedParagraph": false,
+          "amountHideCellsInside": 0,
+          "codeOutputView": "col",
+          "codeOutputHidden": false,
+          "outputInfo": {
+            "isExpanded": false,
+            "scrollTop": 0
+          },
+          "maskInfo": {
+            "isMaskVisible": true,
+            "isEditorVisible": true,
+            "isAutoplayActive": false
+          }
+        }
+      }
+    },
+    {
+      "id": "13a611f9",
+      "cell_type": "code",
+      "source": [
+        "using InteractiveUtils\nVERSION\nversioninfo()"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": "Julia Version 1.12.4\nCommit 01a2eadb047 (2026-01-06 16:56 UTC)\nBuild Info:\n  Official https://julialang.org release\nPlatform Info:\n  OS: Linux (x86_64-linux-gnu)\n  CPU: 112 × Intel(R) Xeon(R) Platinum 8180 CPU @ 2.50GHz\n  WORD_SIZE: 64\n  LLVM: libLLVM-18.1.7 (ORCJIT, skylake-avx512)\n  GC: Built with stock GC\nThreads: 5 default, 3 interactive, 5 GC (on 112 virtual cores)\nEnvironment:\n  JULIA_LSP_STORE_PATH = /user/lsp_store\n  JULIA_CPU_TARGET = generic;sandybridge,-xsaveopt,clone_all;haswell,-rdrnd,base(1)\n  JULIA_LSP_PORT = 3751\n  JULIA_NUM_PRECOMPILE_TASKS = 8\n  JULIA_PKG_PRECOMPILE_AUTO = 0\n  JULIA_DEPOT_PATH = /user/.packages:/opt/depot/core:/opt/depot/mtl:/opt/depot/demos:/opt/depot/stdlib\n  JULIA_PATH = /usr/local/julia\n  LD_LIBRARY_PATH = /usr/local/nvidia/lib:/usr/local/nvidia/lib64\n  JULIA_PROJECT = /user/.project/\n  JULIA_DA_STORE_PATH = /user/da_store\n  JULIA_PKG_SERVER = http://pkgserver.pkgserver.svc.cluster.local\n  JULIA_NUM_THREADS = 7,1\n  JULIA_DA_PORT = 3752\n  JULIA_DEBUG = BackendLib,AbstractAPI\n"
+        }
+      ],
+      "metadata": {
+        "name": "Версии",
+        "engee": {
+          "isDisplay": true,
+          "isParagraph": false,
+          "isClosedParagraph": false,
+          "amountHideCellsInside": 0,
+          "codeOutputView": "col",
+          "codeOutputHidden": false,
+          "outputInfo": {
+            "isExpanded": false,
+            "scrollTop": 0
+          },
+          "maskInfo": {
+            "isMaskVisible": true,
+            "isEditorVisible": true,
+            "isAutoplayActive": false
+          }
+        }
+      }
+    },
+    {
+      "id": "aa79af7b",
+      "cell_type": "code",
+      "source": [
+        "# ЛР03, вариант 13. Запуск из папки lab_03: julia src/LR03_13.jl <новый каталог результатов>\n# Учебная библиотека хранится отдельно и не изменяется.\nusing Dates, TOML, Base64, Printf, InteractiveUtils\nif !isdefined(Main, :make_scene)\n    include(joinpath(@__DIR__, \"original\", \"lab03_lib.jl\"))\nend\nusing Plots\n\nfunction run_lr03(out; engee_version=\"не зафиксирована\", cabinet_version=\"не зафиксирована\")\n    isdir(out) && !isempty(readdir(out)) && error(\"Каталог результатов непуст. Укажите новый каталог.\")\n    mkpath(out)\n    stamp() = string(now(UTC) + Hour(3)) * \"+03:00\"\n    plan = Dict(\"recorded_at_msk\" => stamp(), \"variant\" => 13,\n        \"hypothesis\" => \"Энтропия уменьшится; контраст может увеличиться; средняя яркость изменится слабо.\",\n        \"relative_change_percent_gt\" => 5.0, \"psnr_db_lt\" => 30.0,\n        \"luma_atol\" => 1e-7, \"luma_rtol\" => 0.0,\n        \"seeds\" => collect(101:105), \"bins\" => 32,\n        \"scene\" => Dict(\"n\" => 128, \"lo\" => 0.02, \"hi\" => 0.30, \"noise\" => 0.02, \"checker\" => 0))\n    open(joinpath(out, \"expectations.toml\"), \"w\") do io\n        TOML.print(io, plan)\n    end\n    started = stamp()\n    img = make_scene(101; scene_preset(3)...)\n    description = describe_image(img)\n    g = luma_images(img)\n    gm = luma_manual(img)\n    h = apply_factor(g, 1)\n    maxdiff = maximum(abs.(g .- gm))\n    luma_equal = all(isapprox.(g, gm; atol=1e-7, rtol=0))\n    hash1 = array_sha(g)\n    hash2 = array_sha(luma_images(make_scene(101; scene_preset(3)...)))\n    @assert hash1 == hash2\n    @assert luma_equal\n    @assert all((0 .<= g) .& (g .<= 1)) && all((0 .<= h) .& (h .<= 1))\n    save(joinpath(out, \"scene_rgb.png\"), RGB{N0f8}.(img))\n    save(joinpath(out, \"before.png\"), Gray{N0f8}.(g))\n    save(joinpath(out, \"after.png\"), Gray{N0f8}.(h))\n    # Сохраняются точные Float64 до кодирования PNG; порядок Julia column-major.\n    for seed in 101:105\n        a = luma_images(make_scene(seed; scene_preset(3)...))\n        b = apply_factor(a, 1)\n        write(joinpath(out, \"before_$(seed).f64\"), reinterpret(UInt8, vec(a)))\n        write(joinpath(out, \"after_$(seed).f64\"), reinterpret(UInt8, vec(b)))\n    end\n    counts_before = hist_counts(g, 32)\n    counts_after = hist_counts(h, 32)\n    @assert sum(counts_before) == sum(counts_after) == 128^2\n    centers = ((1:32) .- 0.5) ./ 32\n    ymax = max(maximum(counts_before), maximum(counts_after)) * 1.08\n    p1 = bar(centers, counts_before; title=\"Before\", xlabel=\"Luminance [0,1]\",\n        ylabel=\"Pixels\", legend=false, color=:gray, bar_width=1/32, xlims=(0,1), ylims=(0,ymax))\n    p2 = bar(centers, counts_after; title=\"After: 4 bits\", xlabel=\"Luminance [0,1]\",\n        ylabel=\"Pixels\", legend=false, color=:black, bar_width=1/32, xlims=(0,1), ylims=(0,ymax))\n    savefig(plot(p1,p2; layout=(1,2), size=(1200,460)), joinpath(out, \"histograms.png\"))\n    open(joinpath(out, \"histogram.csv\"), \"w\") do io\n        println(io, \"bin,left,right,before,after\")\n        for k in 1:32\n            println(io, join((k,(k-1)/32,k/32,counts_before[k],counts_after[k]), ','))\n        end\n    end\n    summary = variant_summary(13)\n    rows = [Dict(\"metric\"=>string(r[1]), \"base\"=>r[2], \"s\"=>r[3], \"after\"=>r[4],\n        \"delta\"=>r[5], \"ratio\"=>r[6], \"statistical\"=>r[7],\n        \"relative_percent\"=>100*abs(r[5])/abs(r[2]),\n        \"practical\"=>100*abs(r[5])/abs(r[2])>5) for r in summary.rows]\n    perseed = [let\n        a = luma_images(make_scene(seed; scene_preset(3)...)); b = apply_factor(a,1)\n        ma = metrics3(a); mb = metrics3(b)\n        Dict(\"seed\"=>seed, \"before\"=>Dict(string(k)=>ma[k] for k in keys(ma)),\n            \"after\"=>Dict(string(k)=>mb[k] for k in keys(mb)), \"mse\"=>mse(a,b),\n            \"psnr_db\"=>psnr_db(a,b), \"sha256\"=>array_sha(a))\n    end for seed in 101:105]\n    # Дополнительная проверка демо из методички, не результаты варианта 13.\n    demo = variant_summary(1)\n    demo_description = describe_image(make_scene(101))\n    demo_g = luma_images(make_scene(101))\n    demo_values = Dict(\"variant\"=>1, \"psnr_db\"=>demo.psnr, \"sha256\"=>array_sha(demo_g),\n        \"luma_maxdiff\"=>maximum(abs.(demo_g.-luma_manual(make_scene(101)))),\n        \"description\"=>Dict(\"size\"=>collect(demo_description.size), \"min\"=>demo_description.min,\n            \"max\"=>demo_description.max, \"bytes\"=>demo_description.bytes),\n        \"rows\"=>[Dict(\"metric\"=>string(r[1]),\"base\"=>r[2],\"s\"=>r[3],\"after\"=>r[4],\"delta\"=>r[5],\"ratio\"=>r[6]) for r in demo.rows])\n    results = Dict(\"started_at_msk\"=>started, \"finished_at_msk\"=>stamp(),\n        \"variant\"=>13, \"scene\"=>plan[\"scene\"], \"seeds\"=>plan[\"seeds\"], \"bins\"=>32,\n        \"environment\"=>Dict(\"julia\"=>string(VERSION),\"engee\"=>engee_version,\"cabinet\"=>cabinet_version,\n            \"Images\"=>string(Base.pkgversion(Images)),\"Plots\"=>string(Base.pkgversion(Plots)),\n            \"os\"=>string(Sys.KERNEL),\"arch\"=>string(Sys.ARCH),\"word_size\"=>Sys.WORD_SIZE,\n            \"endian\"=>(ENDIAN_BOM==0x04030201 ? \"little\" : \"big\")),\n        \"description\"=>Dict(\"size\"=>collect(description.size),\"eltype\"=>description.eltype,\n            \"min\"=>description.min,\"max\"=>description.max,\"bytes\"=>description.bytes),\n        \"luma\"=>Dict(\"maxdiff\"=>maxdiff,\"equal_at_tolerance\"=>luma_equal,\n            \"sha256_first\"=>hash1,\"sha256_repeat\"=>hash2,\n            \"range_before\"=>[minimum(g),maximum(g)],\"range_after\"=>[minimum(h),maximum(h)],\n            \"occupied_levels_after\"=>length(unique(h))),\n        \"psnr_mean_db\"=>summary.psnr, \"rows\"=>rows, \"per_seed\"=>perseed, \"demo\"=>demo_values)\n    open(joinpath(out, \"results.toml\"), \"w\") do io\n        TOML.print(io, results)\n    end\n    versionlog = sprint(versioninfo)\n    write(joinpath(out, \"versioninfo.log\"), versionlog)\n    open(joinpath(out, \"run.log\"), \"w\") do io\n        println(io,\"Started: \",started,\"\\nJulia: \",VERSION,\"\\nVariant: 13\\nDescription: \",description)\n        println(io,\"Luma maxdiff: \",maxdiff,\"\\nSHA256 first: \",hash1,\"\\nSHA256 repeat: \",hash2)\n        println(io,\"PSNR mean dB: \",summary.psnr)\n        for r in rows; println(io,r); end\n        println(io,\"Finished: \",results[\"finished_at_msk\"])\n    end\n    # Единый транспортный файл позволяет выгрузить все точные байты через интерфейс Engee.\n    files = [Dict(\"name\"=>name,\"sha256\"=>bytes2hex(sha256(read(joinpath(out,name)))),\n        \"base64\"=>base64encode(read(joinpath(out,name)))) for name in sort(readdir(out)) if isfile(joinpath(out,name))]\n    bundle = joinpath(dirname(out), \"LR03_13_export.toml\")\n    isfile(bundle) && error(\"Транспортный файл уже существует; выберите другой родительский каталог.\")\n    open(bundle, \"w\") do io; TOML.print(io,Dict(\"files\"=>files)); end\n    println(read(joinpath(out,\"run.log\"),String))\n    println(\"Export: \",bundle,\"; bytes: \",filesize(bundle))\n    return results\nend\n"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "run_lr03 (generic function with 1 method)"
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ],
+      "metadata": {
+        "name": "Расчёт и экспорт",
+        "engee": {
+          "isDisplay": true,
+          "isParagraph": false,
+          "isClosedParagraph": false,
+          "amountHideCellsInside": 0,
+          "codeOutputView": "col",
+          "codeOutputHidden": false,
+          "outputInfo": {
+            "isExpanded": false,
+            "scrollTop": 0
+          },
+          "maskInfo": {
+            "isMaskVisible": true,
+            "isEditorVisible": true,
+            "isAutoplayActive": false
+          }
+        }
+      }
+    },
+    {
+      "id": "38fd0d3f",
+      "cell_type": "code",
+      "source": [
+        "result_lr03 = run_lr03(\"/user/AI_creative_technologies/LR03/artifacts\"; engee_version=\"26.9.2-H4\")"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": "Started: 2026-10-07T22:41:06.793+03:00\nJulia: 1.12.4\nVariant: 13\nDescription: (size = (128, 128), eltype = \"RGB{Float64}\", min = 0.0, max = 0.36858140963635655, bytes = 393216)\nLuma maxdiff: 4.081960103263782e-9\nSHA256 first: 9db03f25cac20f04afd23bbf013464a28dce9ebe6cb893f0d16aa949ccc52436\nSHA256 repeat: 9db03f25cac20f04afd23bbf013464a28dce9ebe6cb893f0d16aa949ccc52436\nPSNR mean dB: 33.324635779215065\nDict{String, Any}(\"base\" => 0.14900661847793212, \"metric\" => \"mean\", \"ratio\" => 12.400502381002191, \"after\" => 0.14798095703124997, \"statistical\" => true, \"practical\" => false, \"s\" => 8.27112817827026e-5, \"delta\" => -0.0010256614466821468, \"relative_percent\" => 0.6883328117630206)\nDict{String, Any}(\"base\" => 0.028001356329008263, \"metric\" => \"contrast\", \"ratio\" => 70.96967555385939, \"after\" => 0.03767239548095688, \"statistical\" => true, \"practical\" => true, \"s\" => 0.00013627002063168795, \"delta\" => 0.00967103915194862, \"relative_percent\" => 34.53775252282982)\nDict{String, Any}(\"base\" => 1.9030115272369954, \"metric\" => \"entropy\", \"ratio\" => 92.03858982755597, \"after\" => 1.2149558393555757, \"statistical\" => true, \"practical\" => true, \"s\" => 0.0074757304427476, \"delta\" => -0.6880556878814197, \"relative_percent\" => 36.15614924206033)\nFinished: 2026-10-07T22:41:23.064+03:00\n\nExport: /user/AI_creative_technologies/LR03/LR03_13_export.toml; bytes: 1854245\n"
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "Dict{String, Any} with 13 entries:\n  \"finished_at_msk\" => \"2026-10-07T22:41:23.064+03:00\"\n  \"demo\"            => Dict{String, Any}(\"variant\"=>1, \"sha256\"=>\"50567c6b9e5e4…\n  \"environment\"     => Dict{String, Any}(\"endian\"=>\"little\", \"julia\"=>\"1.12.4\",…\n  \"variant\"         => 13\n  \"seeds\"           => [101, 102, 103, 104, 105]\n  \"description\"     => Dict{String, Any}(\"max\"=>0.368581, \"min\"=>0.0, \"eltype\"=…\n  \"started_at_msk\"  => \"2026-10-07T22:41:06.793+03:00\"\n  \"luma\"            => Dict{String, Any}(\"sha256_repeat\"=>\"9db03f25cac20f04afd2…\n  \"per_seed\"        => Dict{String, Any}[Dict(\"psnr_db\"=>33.3262, \"mse\"=>0.0004…\n  \"scene\"           => Dict{String, Real}(\"lo\"=>0.02, \"hi\"=>0.3, \"checker\"=>0, …\n  \"psnr_mean_db\"    => 33.3246\n  \"bins\"            => 32\n  \"rows\"            => Dict{String, Any}[Dict(\"base\"=>0.149007, \"metric\"=>\"mean…"
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ],
+      "metadata": {
+        "name": "Вариант 13",
+        "engee": {
+          "isDisplay": true,
+          "isParagraph": false,
+          "isClosedParagraph": false,
+          "amountHideCellsInside": 0,
+          "codeOutputView": "col",
+          "codeOutputHidden": false,
+          "outputInfo": {
+            "isExpanded": false,
+            "scrollTop": 0
+          },
+          "maskInfo": {
+            "isMaskVisible": true,
+            "isEditorVisible": true,
+            "isAutoplayActive": false
+          }
+        }
+      }
+    }
+  ]
+}

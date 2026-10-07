@@ -1,0 +1,16 @@
+relative_change_percent_gt = 5.0
+luma_rtol = 0.0
+luma_atol = 1.0e-7
+psnr_db_lt = 30.0
+hypothesis = "Энтропия уменьшится; контраст может увеличиться; средняя яркость изменится слабо."
+variant = 13
+seeds = [101, 102, 103, 104, 105]
+bins = 32
+recorded_at_msk = "2026-10-07T22:41:06.353+03:00"
+
+[scene]
+lo = 0.02
+hi = 0.3
+checker = 0
+noise = 0.02
+n = 128

@@ -1,0 +1,49 @@
+# Паспорт эксперимента ЛР03 — вариант 13
+
+**laboratory**: 3
+
+**variant**: 13
+
+**student**: Рясной Владимир Олегович
+
+**group**: МИК11
+
+**preregistration**: {"recorded_at_msk": "2026-10-07T22:21:03+03:00", "variant": 13, "scene": {"n": 128, "lo": 0.02, "hi": 0.3, "noise": 0.02, "checker": 0}, "factor": "quantize 4 bits", "seeds": [101, 102, 103, 104, 105], "histogram_bins": 32, "hypothesis": "Квантование уменьшит энтропию гистограммы, может увеличить контраст и слабо изменить среднюю яркость; основной эффект проявится в распределении уровней.", "criteria": {"statistical": "abs(delta) > 2 * sample_std_baseline (учебный критерий)", "practical_relative_change_percent_gt": 5, "practical_psnr_db_lt": 30, "luma_max_abs_diff_atol": 1e-07, "luma_rtol": 0}, "rationale": "5% служит учебным допуском для статистик; 30 дБ соответствует MSE 0.001 на диапазоне [0,1]. Для тёмной сцены дополнительно приводится абсолютное изменение. Допуски не являются универсальной оценкой восприятия."}
+
+**run_started_msk**: 2026-10-07T22:41:06.793+03:00
+
+**run_finished_msk**: 2026-10-07T22:41:23.064+03:00
+
+**environment**: {"endian": "little", "julia": "1.12.4", "engee": "26.9.2-H4", "arch": "x86_64", "Images": "0.26.2", "Plots": "1.41.6", "cabinet": "26.10.1", "word_size": 64, "os": "Linux", "cabinet_evidence": "artifacts/engee_versions.json"}
+
+**library_sha256**: cd1622643e7cfe7cc01bb7d8067e4802a76f6a76e9a6833ba4c09c84bb9fa62a
+
+**library_source**: Материалы преподавателя, 19.09.2026; файл 5027 байт сохранён без изменений
+
+**data**: Синтетическая сцена: диагональный градиент, круг, гауссов шум; локальный MersenneTwister(seed)
+
+**scene**: {"lo": 0.02, "hi": 0.3, "checker": 0, "noise": 0.02, "n": 128}
+
+**factor**: round(x*15)/15 — квантование до 4 бит
+
+**seeds**: [101, 102, 103, 104, 105]
+
+**histogram_bins**: 32
+
+**array_storage**: Float64 little-endian, column-major, 128×128; 131072 байт на массив
+
+**luma**: {"sha256_repeat": "9db03f25cac20f04afd23bbf013464a28dce9ebe6cb893f0d16aa949ccc52436", "equal_at_tolerance": true, "maxdiff": 4.081960103263782e-09, "range_after": [0.06666666666666667, 0.2], "occupied_levels_after": 3, "sha256_first": "9db03f25cac20f04afd23bbf013464a28dce9ebe6cb893f0d16aa949ccc52436", "range_before": [0.07705154230614063, 0.22531519386959947]}
+
+**summary**: [{"base": 0.14900661847793212, "metric": "mean", "ratio": 12.400502381002191, "after": 0.14798095703124997, "statistical": true, "practical": false, "s": 8.27112817827026e-05, "delta": -0.0010256614466821468, "relative_percent": 0.6883328117630206}, {"base": 0.028001356329008263, "metric": "contrast", "ratio": 70.96967555385939, "after": 0.03767239548095688, "statistical": true, "practical": true, "s": 0.00013627002063168795, "delta": 0.00967103915194862, "relative_percent": 34.53775252282982}, {"base": 1.9030115272369954, "metric": "entropy", "ratio": 92.03858982755597, "after": 1.2149558393555757, "statistical": true, "practical": true, "s": 0.0074757304427476, "delta": -0.6880556878814197, "relative_percent": 36.15614924206033}]
+
+**psnr_mean_db**: 33.324635779215065
+
+**psnr_maxval**: 1
+
+**statistical_rule**: Учебный критерий |Δ|>2s; s — выборочное стандартное отклонение исходной метрики между пятью seed, ddof=1; не формальный тест
+
+**practical_conclusion**: Контраст и энтропия превышают допуск 5%; средняя яркость — нет. PSNR 33.3246 дБ выше порога 30 дБ. Изменение формы распределения и полосы заметны, высокий PSNR не исключает потери деталей.
+
+**limitations**: ["Одна синтетическая тёмная сцена и пять реализаций шума", "Порог 5% и 30 дБ — заранее выбранные учебные критерии", "Энтропия зависит от 32 интервалов; PSNR не является моделью восприятия"]
+
+**artifact_archive**: artifacts/LR03_13_artifacts.zip
