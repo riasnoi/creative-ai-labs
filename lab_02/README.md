@@ -20,7 +20,7 @@ ShareAlike допустимо. Выполнено 7 октября 2026 года
 - [Паспорт данных](artifacts/data_card.md), [карточка модели](artifacts/model_card.md).
 - [Реестр CSV](artifacts/risk_register.csv), [ранжирование](artifacts/risk_ranking.md), [RESULT PASS в логе](artifacts/risk_validation.log).
 - [Журнал](experiment_journal.md), [ожидания до запуска](artifacts/expectations_before_audit.json), [карта требований](docs/REVIEW.md), [проверки](docs/VERIFICATION.md).
-- [Ответы на все 10 вопросов](artifacts/control_answers.md), [источники и раскрытие ИИ-помощи](artifacts/sources.md).
+- [Ответы на все 10 вопросов](artifacts/control_answers.md), [источники](artifacts/sources.md).
 
 ## Проверка без изменения результатов
 
