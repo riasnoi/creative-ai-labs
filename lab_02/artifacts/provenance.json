@@ -1,0 +1,14 @@
+{
+  "input_archive_sha256": "171b67c58daec8ae2ba2af082ad7464e22732061b8ede68083f487e20bc06056",
+  "method_docx_sha256": "714cbb202f44ee59ea987f8aa4e38c1e487993621817e1124a3df4fdd2793edd",
+  "scripts": {
+    "lab02_audit.py": "50bf77e48dca05a123f30ca259ed420d7bb4bee8792373cab4ebaf67087f90ae",
+    "lab02_risks.py": "9581afb696758047d3dc427b7287ab00221e3e2f06f8ecddc6cbd7477e9f6f47",
+    "lab02_model_card.py": "1bd32cd27a64395bcff81053518a3bc2f1576b937a7373207f47899382ece1ac",
+    "lab02_common.py": "00624727e535237bb9a363abfed1f6d14a50e748e52a0fc57e03877727706f41",
+    "lab02_make_variant.py": "4db53312f631af41e324d73166a465e0046732faa9a92c414ba571fa62f742dd"
+  },
+  "unchanged_teaching_scripts": true,
+  "manifest_sha256_is_of": "UTF-8 strings variant13-itemNN, not media files",
+  "lab01_passport_sha256": "c725a6fcd44aa7ea360a8120ae743d8fdd552a820fbaf78c584a48ddc5a73aa7"
+}

@@ -1,0 +1,4 @@
+2026-10-07T20:34:43+03:00
+$ python src/lab02_audit.py --manifest artifacts/manifest_release_candidate.csv --policy artifacts/v13/policy.json --out artifacts/release_audit
+объектов 11; ошибок 0; предупреждений 0
+exit_code=0

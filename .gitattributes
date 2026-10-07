@@ -15,3 +15,12 @@
 # Preserve the original teaching materials, including CRLF line endings.
 docs/teacher_examples/demo_journal/** -text
 ЛР01/variants_lr01.json -text
+# Preserve the input bytes and the initial CSV emitted by the teaching scripts.
+lab_02/src/*.py -text
+lab_02/docs/Методические_указания.md -text
+lab_02/docs/variants_lr02.json -text
+lab_02/docs/input/lab01_passport.json -text
+lab_02/artifacts/v13/manifest.csv -text
+lab_02/docs/generated/data_card_draft.md -text
+lab_02/docs/generated/audit_report_original.md -text
+lab_02/docs/generated/risk_template.csv -text

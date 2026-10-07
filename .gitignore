@@ -22,3 +22,12 @@ Thumbs.db
 !.env.example
 .idea/
 .vscode/
+
+# Codex service files stay outside the published coursework
+.codex/
+.agents/
+skills/
+**/SKILL.md
+**/AGENTS.md
+**/Artifact.md
+artifact-template.json

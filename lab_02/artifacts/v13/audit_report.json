@@ -1,0 +1,8 @@
+[
+  {
+    "rule": "R8",
+    "severity": "warning",
+    "item": "item07",
+    "message": "не указана дата получения"
+  }
+]

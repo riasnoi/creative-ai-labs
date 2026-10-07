@@ -1,0 +1,11 @@
+{
+  "timestamp_precision": "one second",
+  "expectations_file_mtime_ns": 1791394011684140980,
+  "audit_log_mtime_ns": 1791394011802601856,
+  "command_order": [
+    "write expectations and journal",
+    "execute first audit in a separate sequential command",
+    "write stdout to audit_run.log"
+  ],
+  "limitation": "Filesystem timestamps record file writes, not process start; chronological order was additionally checked against the actual sequential commands. Coarse ISO timestamps fall within the same second and were not altered."
+}

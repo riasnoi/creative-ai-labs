@@ -1,0 +1,27 @@
+{
+  "recorded_at_msk": "2026-10-07T20:26:51+03:00",
+  "variant": 13,
+  "before_audit": true,
+  "expected_errors": 0,
+  "expected_warnings": 1,
+  "expected_findings": [
+    {
+      "rule": "R8",
+      "item": "item07",
+      "severity": "warning"
+    }
+  ],
+  "expected_no_trigger": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R9",
+    "R10"
+  ],
+  "rationale": "Все идентификаторы из учебного каталога; commercial_use=false, share_alike_acceptable=true; NC у item02,item05,item06,item10 не конфликтует; SA у item06,item10 допускается. У item07 отсутствует дата. Персональных данных, дубликатов и отсутствующих правообладателей нет.",
+  "success_criterion": "Решения для 100% находок; 7 разделов паспорта; 9 разделов карточки; >=5 рисков, >=4 категории, Data Privacy и Harmful Bias or Homogenization; RESULT: PASS; не юридическая консультация."
+}
