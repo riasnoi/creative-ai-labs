@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-10-18T23:05:39.384862+03:00",
+  "variant": 13,
+  "seed": 1013,
+  "prompt": "poster concept for a science exhibition, abstract constellation of connected nodes, dark background with white and cyan lines, balanced composition, no text, no logo",
+  "hypothesis": "Свежие CPU-генераторы с seed 1013 в одном сеансе дадут побитово одинаковые изображения. Общий генератор изменит состояние и второе изображение.",
+  "tolerance_db": 40.0,
+  "decision_rule": "identical: одинаковые пиксели; close: PSNR >= 40 dB; different: PSNR < 40 dB",
+  "fixed": {
+    "model": "stabilityai/sd-turbo",
+    "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+    "size": 512,
+    "steps": 1,
+    "guidance_scale": 0.0,
+    "dtype": "float16",
+    "generator_device": "cpu",
+    "batch": 1
+  }
+}

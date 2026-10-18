@@ -1,0 +1,45 @@
+{
+  "files": [
+    {
+      "path": "docs/Методические_указания.pdf",
+      "sha256": "7b42affb2ee427715460322f0a99e8ea2d76649686caa3b3084422ed3fb01de5",
+      "bytes": 1370970
+    },
+    {
+      "path": "docs/variants_lr05.json",
+      "sha256": "02198e79a5349116e2748cca843d47cb35503ac935da8d29178259d6d3b48383",
+      "bytes": 58605
+    },
+    {
+      "path": "src/original/lab05_lib.py",
+      "sha256": "4eb176506585ffcda1702605a767309fb451808229c3622f80ce882b7fa2ce1a",
+      "bytes": 6447
+    },
+    {
+      "path": "src/original/lab05_demo.py",
+      "sha256": "53b3b13f19e6754bda1cde58ef09f1e45b1595d1c4dab2a9b02bd4d99d731ce4",
+      "bytes": 2677
+    },
+    {
+      "path": "docs/LICENSE_model.md",
+      "sha256": "d6f6b1a4dce5c852bd6d7d9482d002baf0ccdb71e662250b73be9eec8764ee8d",
+      "bytes": 11852
+    },
+    {
+      "path": "docs/MODEL_CARD.md",
+      "sha256": "2482ac53e71baf0624ede7aca74122ef60e442360535105cd57bcc9d7138c22e",
+      "bytes": 5900
+    },
+    {
+      "path": "src/lab05.ipynb",
+      "sha256": "b63073ccde921c28e57c8e42d13c6959b6a63729ce26dc26a72fb1d81fc496d2",
+      "bytes": 2431077
+    },
+    {
+      "path": "artifacts/lab05_13_artifacts.zip",
+      "sha256": "23ac6522894224f21fabea1295ca9ef7c9e3d8176b4922245e0888a662efef87",
+      "bytes": 2612307
+    }
+  ],
+  "origin": "PDF и JSON предоставлены для задания; учебные Python-файлы получены из архива материалов той же работы в курсе. Демо не исполнялось как собственный результат. Изображения получены собственным запуском в Colab. LICENSE.md и карточка модели загружены с закреплённой ревизии 18.10.2026."
+}

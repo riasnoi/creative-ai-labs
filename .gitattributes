@@ -41,3 +41,14 @@ lab_04/docs/Методические_указания.md -text
 lab_04/docs/variants_lr04.json -text
 lab_04/docs/demo_journal.md -text
 lab_04/artifacts/engee/** -text
+
+# Exact teaching sources, variant table and original Colab export for LR05.
+lab_05/src/original/** -text
+lab_05/src/lab05.ipynb -text
+lab_05/docs/variants_lr05.json -text
+lab_05/artifacts/A/** -text
+lab_05/artifacts/B/** -text
+lab_05/artifacts/error_first/** -text
+lab_05/artifacts/error_second/** -text
+lab_05/artifacts/corrected/** -text
+lab_05/artifacts/run.log -text

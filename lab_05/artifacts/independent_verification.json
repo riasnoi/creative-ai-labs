@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "method": "Пересчёт из PNG с float64; без генерации модели",
+  "checks": {
+    "repeat": {
+      "pixel_equal": true,
+      "max_diff": 0,
+      "mse": 0.0,
+      "psnr": "+Infinity",
+      "verdict": "identical"
+    },
+    "shared_generator": {
+      "pixel_equal": false,
+      "max_diff": 246,
+      "mse": 4535.090526580811,
+      "psnr": 11.564944002761807,
+      "verdict": "different"
+    },
+    "error_first_vs_A": {
+      "pixel_equal": true,
+      "max_diff": 0,
+      "mse": 0.0,
+      "psnr": "+Infinity",
+      "verdict": "identical"
+    },
+    "corrected_vs_A": {
+      "pixel_equal": true,
+      "max_diff": 0,
+      "mse": 0.0,
+      "psnr": "+Infinity",
+      "verdict": "identical"
+    }
+  }
+}
