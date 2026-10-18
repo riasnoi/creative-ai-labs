@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-10-18T23:29:18.646492+03:00",
+  "checks": [
+    "10 PNG SHA-256 and sizes",
+    "independent numpy Sobel and contrast vs raw: tolerance 1e-12",
+    "all 4 metric aggregates vs summary",
+    "comparison pixels vs resized source images",
+    "CFG states and guidance PNG hashes, independent PSNR",
+    "same-session repeat 101 hashes",
+    "hypothesis chronology",
+    "library bytes vs recorded hashes"
+  ],
+  "clip_recomputed": false,
+  "generation_repeated_on_other_machine": false,
+  "local_packages": {
+    "numpy": "2.3.5",
+    "Pillow": "12.3.0",
+    "pypdf": "6.10.0"
+  },
+  "result": "PASS",
+  "local_python": "3.12.14"
+}

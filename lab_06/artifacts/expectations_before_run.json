@@ -1,0 +1,41 @@
+{
+  "recorded_at": "2026-10-18T23:21:21.867318+03:00",
+  "variant": 13,
+  "context": 3,
+  "factor": "steps_1_to_4",
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "hypothesis": "Четыре шага увеличат энергию границ, контраст и время; сходство CLIP останется в пределах ±1 балла.",
+  "tolerances": {
+    "clip_absolute": 1.0,
+    "edge_relative": 0.1,
+    "contrast_relative": 0.1,
+    "seconds_relative": 0.2
+  },
+  "classification": "CLIP: рост улучшение, падение ухудшение; время: снижение улучшение. Рост edge/contrast условно улучшение выраженности признака, не качества; внутри допуска нейтрально. Граница включена в нейтральную область.",
+  "benefit_rule": "Рост времени окупается по критериям опыта, только если CLIP растёт более чем на 1 балл и узлы/линии остаются различимы; одна резкость не обосновывает пользу.",
+  "A": {
+    "prompt": "poster concept for a science exhibition, abstract constellation of connected nodes, dark background with white and cyan lines, balanced composition, no text, no logo",
+    "steps": 1,
+    "guidance": 0.0,
+    "size": 512
+  },
+  "B": {
+    "prompt": "poster concept for a science exhibition, abstract constellation of connected nodes, dark background with white and cyan lines, balanced composition, no text, no logo",
+    "steps": 4,
+    "guidance": 0.0,
+    "size": 512
+  },
+  "model": "stabilityai/sd-turbo",
+  "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+  "clip_model": "openai/clip-vit-base-patch32",
+  "clip_revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+  "dtype": "float16",
+  "generator_device": "cpu",
+  "batch": 1
+}

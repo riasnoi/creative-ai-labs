@@ -1,0 +1,137 @@
+{
+  "started_at": "2026-10-18T23:21:21.867318+03:00",
+  "finished_at": "2026-10-18T23:22:15.360254+03:00",
+  "variant": 13,
+  "plan": {
+    "recorded_at": "2026-10-18T23:21:21.867318+03:00",
+    "variant": 13,
+    "context": 3,
+    "factor": "steps_1_to_4",
+    "seeds": [
+      101,
+      102,
+      103,
+      104,
+      105
+    ],
+    "hypothesis": "Четыре шага увеличат энергию границ, контраст и время; сходство CLIP останется в пределах ±1 балла.",
+    "tolerances": {
+      "clip_absolute": 1.0,
+      "edge_relative": 0.1,
+      "contrast_relative": 0.1,
+      "seconds_relative": 0.2
+    },
+    "classification": "CLIP: рост улучшение, падение ухудшение; время: снижение улучшение. Рост edge/contrast условно улучшение выраженности признака, не качества; внутри допуска нейтрально. Граница включена в нейтральную область.",
+    "benefit_rule": "Рост времени окупается по критериям опыта, только если CLIP растёт более чем на 1 балл и узлы/линии остаются различимы; одна резкость не обосновывает пользу.",
+    "A": {
+      "prompt": "poster concept for a science exhibition, abstract constellation of connected nodes, dark background with white and cyan lines, balanced composition, no text, no logo",
+      "steps": 1,
+      "guidance": 0.0,
+      "size": 512
+    },
+    "B": {
+      "prompt": "poster concept for a science exhibition, abstract constellation of connected nodes, dark background with white and cyan lines, balanced composition, no text, no logo",
+      "steps": 4,
+      "guidance": 0.0,
+      "size": 512
+    },
+    "model": "stabilityai/sd-turbo",
+    "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+    "clip_model": "openai/clip-vit-base-patch32",
+    "clip_revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "dtype": "float16",
+    "generator_device": "cpu",
+    "batch": 1
+  },
+  "environment": "environment.json",
+  "load_seconds": {
+    "sd_turbo": 29.022346383000013,
+    "clip": 7.9774060380000265
+  },
+  "measurement": "M.measure: perf_counter вокруг L.generate, без загрузки и CLIP, после прогрева обоих режимов seed 0",
+  "reference_text": "poster concept for a science exhibition, abstract constellation of connected nodes, dark background with white and cyan lines, balanced composition, no text, no logo",
+  "metrics": "clip=100*cos; edge=Sobel/8; contrast=std(luma); s_A ddof=1; delta=mean_B-mean_A",
+  "summary": {
+    "variant": 13,
+    "ctx": 3,
+    "factor": "steps_1_to_4",
+    "rows": [
+      [
+        "clip",
+        29.808549880981445,
+        0.5453663553122812,
+        29.329132437705994,
+        -0.47941744327545166,
+        0.8790741097347917,
+        false
+      ],
+      [
+        "edge",
+        0.05184825797889482,
+        0.0024685683876117526,
+        0.08565254087033583,
+        0.03380428289144101,
+        13.693881466312297,
+        true
+      ],
+      [
+        "contrast",
+        0.203840678681469,
+        0.016909150579475955,
+        0.2748313014663726,
+        0.07099062278490359,
+        4.1983553491486925,
+        true
+      ],
+      [
+        "seconds",
+        0.27084837379998133,
+        0.0018101214097202298,
+        0.4919223379999494,
+        0.22107396419996805,
+        122.13211943288212,
+        true
+      ]
+    ]
+  },
+  "error": {
+    "brief": "editorial poster concept for a robotics festival, glowing mechanical arm silhouette, deep blue and amber palette, clean composition, no text, no logo, no people",
+    "seed": 101,
+    "runs": [
+      {
+        "guidance": 0.0,
+        "cfg_active": false,
+        "sha256": "84db2534b3e66ea6f5ac17a7d3ba210bfb7653bcd738534372564a5b46b79b36",
+        "image": "guidance_0.png"
+      },
+      {
+        "guidance": 1.0,
+        "cfg_active": false,
+        "sha256": "84db2534b3e66ea6f5ac17a7d3ba210bfb7653bcd738534372564a5b46b79b36",
+        "image": "guidance_1.png"
+      },
+      {
+        "guidance": 3.0,
+        "cfg_active": true,
+        "sha256": "b961e528cd31aa9da0ce4a7aeb68cbca550ddd3f993f5cd301260ed739e8c015",
+        "image": "guidance_3.png"
+      }
+    ],
+    "equal_sha_0_1": true,
+    "psnr_0_3": 11.605078740312596
+  },
+  "repeat": [
+    {
+      "mode": "A",
+      "seed": 101,
+      "sha256": "b9ca9692a0ca3a4b153ee29cb8f187bb74f935757fce9b7d814cd9aff2b021ce",
+      "matches_saved": true
+    },
+    {
+      "mode": "B",
+      "seed": 101,
+      "sha256": "0c7b7e848a464878754633cd4f22a23eec5095f1a1c6f70a1899a02152bc08a9",
+      "matches_saved": true
+    }
+  ]
+}

@@ -52,3 +52,8 @@ lab_05/artifacts/error_first/** -text
 lab_05/artifacts/error_second/** -text
 lab_05/artifacts/corrected/** -text
 lab_05/artifacts/run.log -text
+
+# Exact teaching sources and primary Colab export for LR06.
+lab_06/src/original/** -text
+lab_06/src/lab06.ipynb -text
+lab_06/artifacts/run.log -text

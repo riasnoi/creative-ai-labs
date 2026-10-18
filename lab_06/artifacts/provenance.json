@@ -1,0 +1,42 @@
+{
+  "inputs": [
+    {
+      "name": "ЛР06_Исследование_параметров_text_to_image.pdf",
+      "bytes": 1369321,
+      "sha256": "e156a25a1f6d26fafba010cd3e595cea15ee759e84289516a2413a1c42fe9f72"
+    },
+    {
+      "name": "lab05_lib.py",
+      "bytes": 6447,
+      "sha256": "4eb176506585ffcda1702605a767309fb451808229c3622f80ce882b7fa2ce1a"
+    },
+    {
+      "name": "lab05_demo.py",
+      "bytes": 2677,
+      "sha256": "53b3b13f19e6754bda1cde58ef09f1e45b1595d1c4dab2a9b02bd4d99d731ce4"
+    },
+    {
+      "name": "lab05.ipynb",
+      "bytes": 2431077,
+      "sha256": "b63073ccde921c28e57c8e42d13c6959b6a63729ce26dc26a72fb1d81fc496d2"
+    },
+    {
+      "name": "lab06_lib.py",
+      "bytes": 6580,
+      "sha256": "c6d8473cf5a3000f4c27fbdef57916c2fbce347db272928d5c4729472f748bd8"
+    },
+    {
+      "name": "lab06_demo.py",
+      "bytes": 1193,
+      "sha256": "6bd455ea028a475f6d21593b6f969446b676a3627ab496fd7f125394361edf4a"
+    }
+  ],
+  "teaching_sources": "src/original: exact bytes, unchanged",
+  "solution": "src/run_lab06.py: wrapper preserving the teaching metric definitions",
+  "primary_export": {
+    "file": "lab06_13_artifacts.zip",
+    "sha256": "5c9e89a748e07cd0eb909e40d618a7e2518c52e3a772b1d9872fbbf775617749"
+  },
+  "notebook": "new lab06.ipynb; lab05.ipynb supplied only as prior-work context",
+  "model_cards": "SD Turbo card/license retained from LR05 at the same revision; CLIP card retrieved at the fixed revision, MIT license from official OpenAI CLIP repository"
+}

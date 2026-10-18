@@ -1,0 +1,14 @@
+[
+  {
+    "mode": "A",
+    "seed": 101,
+    "sha256": "b9ca9692a0ca3a4b153ee29cb8f187bb74f935757fce9b7d814cd9aff2b021ce",
+    "matches_saved": true
+  },
+  {
+    "mode": "B",
+    "seed": 101,
+    "sha256": "0c7b7e848a464878754633cd4f22a23eec5095f1a1c6f70a1899a02152bc08a9",
+    "matches_saved": true
+  }
+]

@@ -1,0 +1,192 @@
+[
+  {
+    "mode": "A",
+    "seed": 101,
+    "settings": {
+      "prompt": "poster concept for a science exhibition, abstract constellation of connected nodes, dark background with white and cyan lines, balanced composition, no text, no logo",
+      "steps": 1,
+      "guidance": 0.0,
+      "size": 512
+    },
+    "metrics": {
+      "clip": 29.692935943603516,
+      "edge": 0.05412521379425236,
+      "contrast": 0.2110784008519008,
+      "seconds": 0.27233493199992154
+    },
+    "image": "A/seed_101.png",
+    "sha256": "b9ca9692a0ca3a4b153ee29cb8f187bb74f935757fce9b7d814cd9aff2b021ce",
+    "recorded_at": "2026-10-18T23:22:07.814784+03:00"
+  },
+  {
+    "mode": "B",
+    "seed": 101,
+    "settings": {
+      "prompt": "poster concept for a science exhibition, abstract constellation of connected nodes, dark background with white and cyan lines, balanced composition, no text, no logo",
+      "steps": 4,
+      "guidance": 0.0,
+      "size": 512
+    },
+    "metrics": {
+      "clip": 29.25821542739868,
+      "edge": 0.08629315182296354,
+      "contrast": 0.28641580754509705,
+      "seconds": 0.48786431799999264
+    },
+    "image": "B/seed_101.png",
+    "sha256": "0c7b7e848a464878754633cd4f22a23eec5095f1a1c6f70a1899a02152bc08a9",
+    "recorded_at": "2026-10-18T23:22:08.462773+03:00"
+  },
+  {
+    "mode": "A",
+    "seed": 102,
+    "settings": {
+      "prompt": "poster concept for a science exhibition, abstract constellation of connected nodes, dark background with white and cyan lines, balanced composition, no text, no logo",
+      "steps": 1,
+      "guidance": 0.0,
+      "size": 512
+    },
+    "metrics": {
+      "clip": 29.806384444236755,
+      "edge": 0.051816102254502755,
+      "contrast": 0.23034877563284625,
+      "seconds": 0.26874487700001737
+    },
+    "image": "A/seed_102.png",
+    "sha256": "2ac9c151d8f77d086e7cadfc19882e02a6a283c82626d8148c1a8401f5b256d7",
+    "recorded_at": "2026-10-18T23:22:08.891496+03:00"
+  },
+  {
+    "mode": "B",
+    "seed": 102,
+    "settings": {
+      "prompt": "poster concept for a science exhibition, abstract constellation of connected nodes, dark background with white and cyan lines, balanced composition, no text, no logo",
+      "steps": 4,
+      "guidance": 0.0,
+      "size": 512
+    },
+    "metrics": {
+      "clip": 29.374977946281433,
+      "edge": 0.08604888942061215,
+      "contrast": 0.29872872515027754,
+      "seconds": 0.49109947400006604
+    },
+    "image": "B/seed_102.png",
+    "sha256": "ca1acef576ebb100b13faf191ca23df6ecbdb0ebdcaf2efcf67ef80c46982d1e",
+    "recorded_at": "2026-10-18T23:22:09.543724+03:00"
+  },
+  {
+    "mode": "A",
+    "seed": 103,
+    "settings": {
+      "prompt": "poster concept for a science exhibition, abstract constellation of connected nodes, dark background with white and cyan lines, balanced composition, no text, no logo",
+      "steps": 1,
+      "guidance": 0.0,
+      "size": 512
+    },
+    "metrics": {
+      "clip": 30.05080819129944,
+      "edge": 0.05447769882691653,
+      "contrast": 0.19497623851986826,
+      "seconds": 0.27307309000002533
+    },
+    "image": "A/seed_103.png",
+    "sha256": "863919e8224b6921bbca45dee6d1c2bf01c755e910ab58a5ee0b63e635dae17c",
+    "recorded_at": "2026-10-18T23:22:09.974630+03:00"
+  },
+  {
+    "mode": "B",
+    "seed": 103,
+    "settings": {
+      "prompt": "poster concept for a science exhibition, abstract constellation of connected nodes, dark background with white and cyan lines, balanced composition, no text, no logo",
+      "steps": 4,
+      "guidance": 0.0,
+      "size": 512
+    },
+    "metrics": {
+      "clip": 29.262912273406982,
+      "edge": 0.09488737965848328,
+      "contrast": 0.27387451152466324,
+      "seconds": 0.49564509599986195
+    },
+    "image": "B/seed_103.png",
+    "sha256": "688821762b7af9c2d86522f5414a975a63151984758b51ec55f43b2725f8afbd",
+    "recorded_at": "2026-10-18T23:22:10.628384+03:00"
+  },
+  {
+    "mode": "A",
+    "seed": 104,
+    "settings": {
+      "prompt": "poster concept for a science exhibition, abstract constellation of connected nodes, dark background with white and cyan lines, balanced composition, no text, no logo",
+      "steps": 1,
+      "guidance": 0.0,
+      "size": 512
+    },
+    "metrics": {
+      "clip": 29.00136411190033,
+      "edge": 0.04896578022436592,
+      "contrast": 0.19090306958098063,
+      "seconds": 0.26970553999990443
+    },
+    "image": "A/seed_104.png",
+    "sha256": "73c055c6a13733cb9e20f4df263d9bc3d92aceb036bdb6353c037c8764b84ae3",
+    "recorded_at": "2026-10-18T23:22:11.063905+03:00"
+  },
+  {
+    "mode": "B",
+    "seed": 104,
+    "settings": {
+      "prompt": "poster concept for a science exhibition, abstract constellation of connected nodes, dark background with white and cyan lines, balanced composition, no text, no logo",
+      "steps": 4,
+      "guidance": 0.0,
+      "size": 512
+    },
+    "metrics": {
+      "clip": 29.155996441841125,
+      "edge": 0.08208958338706807,
+      "contrast": 0.2739802528524823,
+      "seconds": 0.49345016999996005
+    },
+    "image": "B/seed_104.png",
+    "sha256": "4c0df0c9b120d5ddf9f7dea145237d6bfecc209a201e5bec7fc7cf2163800b8e",
+    "recorded_at": "2026-10-18T23:22:11.701050+03:00"
+  },
+  {
+    "mode": "A",
+    "seed": 105,
+    "settings": {
+      "prompt": "poster concept for a science exhibition, abstract constellation of connected nodes, dark background with white and cyan lines, balanced composition, no text, no logo",
+      "steps": 1,
+      "guidance": 0.0,
+      "size": 512
+    },
+    "metrics": {
+      "clip": 30.491256713867188,
+      "edge": 0.0498564947944365,
+      "contrast": 0.19189690882174915,
+      "seconds": 0.27038343000003806
+    },
+    "image": "A/seed_105.png",
+    "sha256": "e945a77299c877ec9a944643729491c1f6101ffe568843f43bc7bc60a417aa8e",
+    "recorded_at": "2026-10-18T23:22:12.109611+03:00"
+  },
+  {
+    "mode": "B",
+    "seed": 105,
+    "settings": {
+      "prompt": "poster concept for a science exhibition, abstract constellation of connected nodes, dark background with white and cyan lines, balanced composition, no text, no logo",
+      "steps": 4,
+      "guidance": 0.0,
+      "size": 512
+    },
+    "metrics": {
+      "clip": 29.593560099601746,
+      "edge": 0.07894370006255212,
+      "contrast": 0.2411572102593427,
+      "seconds": 0.4915526319998662
+    },
+    "image": "B/seed_105.png",
+    "sha256": "79d3af2f99fea34f1bdf3c1daa539aa2cfe982987ce73db45ba391652097c20b",
+    "recorded_at": "2026-10-18T23:22:12.722687+03:00"
+  }
+]
