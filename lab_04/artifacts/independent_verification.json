@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "checks": [
+    "reference geometry",
+    "array SHA-256",
+    "range and finite values",
+    "replicate box filter",
+    "MSE and PSNR",
+    "sample contrast",
+    "summary PSNR and contrast",
+    "PNG quantization",
+    "recording order",
+    "classification"
+  ],
+  "filter_max_abs_error": 4.440892098500626e-16,
+  "delta_psnr_db": 7.831682227771374,
+  "classification": "полезна",
+  "limitation": "Независимая проверка генератора Julia и энергии Собеля здесь не выполняется."
+}

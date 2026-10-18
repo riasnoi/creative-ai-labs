@@ -1,0 +1,232 @@
+finished_at_msk = "2026-10-18T17:45:12.451+03:00"
+theoretical_psnr_db = 20.0
+classification = "полезна"
+noise_psnr_minus_theory_db = 0.12116922917799755
+variant = 13
+seeds = [101, 102, 103, 104, 105]
+started_at_msk = "2026-10-18T17:45:11.672+03:00"
+threshold_db = 1.0
+
+[demo]
+variant = 1
+max_abs_difference = 0.0
+matches_at_1e_10 = true
+
+    [[demo.rows]]
+    base = 33.982103137714965
+    metric = "psnr"
+    exceeds_2s = true
+    ratio = 64.24366971852189
+    after = 29.19575338868147
+    s = 0.07450305641014086
+    delta = -4.786349749033494
+    [[demo.rows]]
+    base = 0.01692548814288977
+    metric = "edge"
+    exceeds_2s = true
+    ratio = 66.67550341353794
+    after = 0.008424262473284544
+    s = 0.00012750148456890567
+    delta = -0.008501225669605225
+    [[demo.rows]]
+    base = 0.20774642267754806
+    metric = "contrast"
+    exceeds_2s = true
+    ratio = 41.33912882083546
+    after = 0.20065402164009138
+    s = 0.00017156629178605263
+    delta = -0.007092401037456675
+
+[environment]
+endian = "little"
+julia = "1.12.4"
+engee = "26.9.2-H4"
+arch = "x86_64"
+Images = "0.26.2"
+cabinet = "не зафиксирована"
+os = "Linux"
+
+[operation]
+name = "box_mean"
+weight = 0.04
+window = [5, 5]
+border = "replicate"
+
+[[per_seed]]
+after_sha256 = "b87037d2eda46fa1370cc89e12ca69bee1b2b8be580d8e0f5e3ae4440cba147f"
+border_check_max_abs = 3.3306690738754696e-16
+delta_psnr = 7.93387121627396
+clipped_zero = 243
+seed = 101
+before_sha256 = "4aa9908bc92fe32394d0bed658e514f9f43e7b9e0eb26a74dd12554bf4a73bb4"
+clipped_one = 30
+
+    [per_seed.after]
+    mse = 0.0015833570124513313
+    edge = 0.016041216934883674
+    psnr = 28.00421150168447
+    contrast = 0.20169260438856976
+
+    [per_seed.before]
+    mse = 0.009839340079578646
+    edge = 0.059058803557191994
+    psnr = 20.07034028541051
+    contrast = 0.2295181995442641
+[[per_seed]]
+after_sha256 = "5bf0426ee0204a29a95e2e111784467eeb4fcacece3870865c306ccba345b780"
+border_check_max_abs = 3.3306690738754696e-16
+delta_psnr = 7.7926883604492225
+clipped_zero = 259
+seed = 102
+before_sha256 = "d6f05fa4cf71e4e5256c42e9b4eef53a925501cfe32d62da78d21d7a57e67fc1"
+clipped_one = 20
+
+    [per_seed.after]
+    mse = 0.001633053072780978
+    edge = 0.015958973165467762
+    psnr = 27.869997008473035
+    contrast = 0.19985856980038888
+
+    [per_seed.before]
+    mse = 0.00982356527344544
+    edge = 0.05911089662079322
+    psnr = 20.077308648023813
+    contrast = 0.22760027659048526
+[[per_seed]]
+after_sha256 = "1e441ac673ed24de2500fc1b82c757b0c6db6fb87364519a7fdcc18af42afc8a"
+border_check_max_abs = 3.3306690738754696e-16
+delta_psnr = 7.8805055880833415
+clipped_zero = 232
+seed = 103
+before_sha256 = "c9ea4b2afd16232a42d5f3b7478f05658d35515996483d7071ead1416fd972e3"
+clipped_one = 27
+
+    [per_seed.after]
+    mse = 0.0015871765334569891
+    edge = 0.015933332396968987
+    psnr = 27.993747662240946
+    contrast = 0.2018163815767851
+
+    [per_seed.before]
+    mse = 0.009742620647753896
+    edge = 0.058550857236301344
+    psnr = 20.113242074157604
+    contrast = 0.22926392716204155
+[[per_seed]]
+after_sha256 = "b81c4fc2bb412f9ae423dbc0f673bd6b66f1efc60cc3c07d77c992a7d8cac6e6"
+border_check_max_abs = 3.3306690738754696e-16
+delta_psnr = 7.7312457739640585
+clipped_zero = 197
+seed = 104
+before_sha256 = "0f7973cae10fb546cb1551993b9c2ed1e7c6aab4000098856c048bd439f78eab"
+clipped_one = 21
+
+    [per_seed.after]
+    mse = 0.0016011128328063484
+    edge = 0.015654554316725862
+    psnr = 27.955780616231806
+    contrast = 0.20038720315592679
+
+    [per_seed.before]
+    mse = 0.009496127034732366
+    edge = 0.057791269676067264
+    psnr = 20.224534842267747
+    contrast = 0.22770892325743763
+[[per_seed]]
+after_sha256 = "5a5817075106cb793c909124a28431d384e8cd1a69c5ed55d18c114088c43d8f"
+border_check_max_abs = 3.3306690738754696e-16
+delta_psnr = 7.820100200086291
+clipped_zero = 252
+seed = 105
+before_sha256 = "d46ad5fa04f86d47ca568522d5bbcccee056ecd3774e1502b6655c346f42e43d"
+clipped_one = 22
+
+    [per_seed.after]
+    mse = 0.0016067486747975118
+    edge = 0.01596685798116486
+    psnr = 27.940520496116594
+    contrast = 0.20110146892204184
+
+    [per_seed.before]
+    mse = 0.009726530890294315
+    edge = 0.05886483252250787
+    psnr = 20.120420296030304
+    contrast = 0.22851242361245144
+
+[scene]
+bg = [0.1, 0.4]
+disc = 0.75
+checker = 0
+noise = 0.1
+n = 128
+
+[reference]
+name = "clean4(3)"
+sha256 = "ab6367770d640f8ecc0002eef3d33db48d233ac3cdef6dfbbf375371b82ee73a"
+edge = 0.00756203932534549
+contrast = 0.20678604249552818
+
+[neighbor]
+classification = "полезна"
+variant = 7
+noise = 0.05
+
+    [[neighbor.rows]]
+    base = 26.0253436915665
+    metric = "psnr"
+    exceeds_2s = true
+    ratio = 38.75321274782946
+    after = 28.890895918896195
+    s = 0.07394360426259605
+    delta = 2.865552227329694
+    [[neighbor.rows]]
+    base = 0.032777603240371274
+    metric = "edge"
+    exceeds_2s = true
+    ratio = 68.27706966038356
+    after = 0.011169843515857132
+    s = 0.0003164716914769941
+    delta = -0.02160775972451414
+    [[neighbor.rows]]
+    base = 0.2127246398446841
+    metric = "contrast"
+    exceeds_2s = true
+    ratio = 27.086010177624523
+    after = 0.20084843473236097
+    s = 0.00043846269843514775
+    delta = -0.011876205112323124
+
+[[sensitivity]]
+classification = "полезна"
+threshold_db = 0.5
+[[sensitivity]]
+classification = "полезна"
+threshold_db = 1.0
+[[sensitivity]]
+classification = "полезна"
+threshold_db = 2.0
+
+[[rows]]
+base = 20.121169229177998
+metric = "psnr"
+exceeds_2s = true
+ratio = 126.81667017816557
+after = 27.95285145694937
+s = 0.061755936477188626
+delta = 7.831682227771374
+[[rows]]
+base = 0.058675331922572335
+metric = "edge"
+exceeds_2s = true
+ratio = 79.08017072549266
+after = 0.01591098695904223
+s = 0.0005407720364182824
+delta = -0.042764344963530106
+[[rows]]
+base = 0.228520750033336
+metric = "contrast"
+exceeds_2s = true
+ratio = 31.53088844703903
+after = 0.20097124556874246
+s = 0.0008737306755839487
+delta = -0.027549504464593533

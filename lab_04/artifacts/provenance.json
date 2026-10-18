@@ -1,0 +1,53 @@
+{
+  "files": [
+    {
+      "path": "src/original/lab04_lib.jl",
+      "bytes": 4612,
+      "sha256": "094cecea2f55a0f53a652149a1a4025e98d87b3994b376be7028c4920cb0f8c2",
+      "origin": "Приложенный комплект ЛР04",
+      "modified": false
+    },
+    {
+      "path": "src/original/lab03_lib.jl",
+      "bytes": 5027,
+      "sha256": "cd1622643e7cfe7cc01bb7d8067e4802a76f6a76e9a6833ba4c09c84bb9fa62a",
+      "origin": "Учебная библиотека ЛР03 из ранее приложенного комплекта",
+      "modified": false
+    },
+    {
+      "path": "docs/Методические_указания.md",
+      "bytes": 60521,
+      "sha256": "cdda37f706d258b8d0d7b6a64a8c2e5c582e9f7365a84254eec3defbab0cb3bf",
+      "origin": "Приложенный комплект ЛР04",
+      "modified": false
+    },
+    {
+      "path": "docs/Методические_указания.docx",
+      "bytes": 41772,
+      "sha256": "4ca92fc494fd4bfb0dc831cf9cb585d5f3a823eb3b50cddd415fd328ac72b6a2",
+      "origin": "Приложенный комплект ЛР04",
+      "modified": false
+    },
+    {
+      "path": "docs/Методические_указания.pdf",
+      "bytes": 944721,
+      "sha256": "21aef1459abfbe17de0ef123d28428774e6181f48dc567cab9456390e02f081a",
+      "origin": "Приложенный комплект ЛР04",
+      "modified": false
+    },
+    {
+      "path": "docs/variants_lr04.json",
+      "bytes": 44330,
+      "sha256": "f4449eec0167e75ce73f9d9aa23f4cab1cdb8a477ab3e6121a03107b552cde08",
+      "origin": "Приложенный комплект ЛР04",
+      "modified": false
+    },
+    {
+      "path": "docs/demo_journal.md",
+      "bytes": 2608,
+      "sha256": "847149c8a497b31ffc3893d09e011a70e7f942e2d462656451a3e724dec738b1",
+      "origin": "Приложенный комплект ЛР04",
+      "modified": false
+    }
+  ]
+}

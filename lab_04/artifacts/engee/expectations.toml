@@ -1,0 +1,19 @@
+additional_checks = ["demo_variant_1", "neighbor_variant_7", "thresholds_0.5_1_2_db"]
+hypothesis = "Усреднение 5×5 при шуме 0,10 увеличит PSNR минимум на 1 дБ; энергия границ и контраст уменьшатся."
+variant = 13
+practical_threshold_db = 1.0
+seeds = [101, 102, 103, 104, 105]
+recorded_at_msk = "2026-10-18T17:45:11.448+03:00"
+
+[scene]
+bg = [0.1, 0.4]
+disc = 0.75
+checker = 0
+noise = 0.1
+n = 128
+
+[operation]
+name = "box_mean"
+weight = 0.04
+window = [5, 5]
+border = "replicate"

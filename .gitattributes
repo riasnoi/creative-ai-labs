@@ -34,3 +34,10 @@ lab_03/docs/Методические_указания.md -text
 lab_03/docs/variants_lr03.json -text
 lab_03/docs/demo_journal.md -text
 lab_03/artifacts/engee/** -text
+# Exact teaching materials and primary Engee bytes for LR04.
+lab_04/src/original/** -text
+lab_04/src/LR04_13.ngscript -text
+lab_04/docs/Методические_указания.md -text
+lab_04/docs/variants_lr04.json -text
+lab_04/docs/demo_journal.md -text
+lab_04/artifacts/engee/** -text
