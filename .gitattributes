@@ -57,3 +57,10 @@ lab_05/artifacts/run.log -text
 lab_06/src/original/** -text
 lab_06/src/lab06.ipynb -text
 lab_06/artifacts/run.log -text
+
+# Exact teaching sources and primary Colab bytes for LR07.
+lab_07/src/original/** -text
+lab_07/src/lab07.ipynb -text
+lab_07/artifacts/run.log -text
+*.npz binary
+*.pt binary

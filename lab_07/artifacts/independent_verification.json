@@ -1,0 +1,9 @@
+{
+  "max_psnr_recalculation_error": 2.7259316475181095e-06,
+  "baseline_numpy": 16.76319009744745,
+  "baseline_error": 1.1256970822159929e-06,
+  "primary_values": 10,
+  "images_per_metric": 1024,
+  "comparison_exact": true,
+  "data_generation_exact": true
+}

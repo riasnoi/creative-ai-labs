@@ -1,0 +1,5 @@
+{
+  "psnr": 16.76319122314453,
+  "target": "noisy test images",
+  "n_test": 1024
+}

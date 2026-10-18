@@ -1,0 +1,4 @@
+# Python 3.13.15; сборка CUDA определяется образом Google Colab.
+torch==2.11.0
+numpy==2.1.3
+Pillow==11.3.0

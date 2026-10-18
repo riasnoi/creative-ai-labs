@@ -1,0 +1,51 @@
+{
+  "variant": 13,
+  "kind": "disc_noise",
+  "configs": {
+    "A": {
+      "arch": "conv",
+      "d": 8,
+      "loss": "mse",
+      "noise": 0.0,
+      "eval_noise": 0.0,
+      "n_train": 4096,
+      "epochs": 20
+    },
+    "B": {
+      "arch": "conv",
+      "d": 2,
+      "loss": "mse",
+      "noise": 0.0,
+      "eval_noise": 0.0,
+      "n_train": 4096,
+      "epochs": 20
+    }
+  },
+  "data_seed": 7,
+  "n_train": 4096,
+  "n_test": 1024,
+  "train_eval": 1024,
+  "epochs": 20,
+  "batch": 128,
+  "optimizer": "Adam",
+  "lr": 0.002,
+  "updates": 640,
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "dtype": "float32",
+  "target": "noisy images, sigma=0.05; no extra training/eval corruption",
+  "baseline_psnr": 16.76319122314453,
+  "plan_time": "2026-10-18T23:40:41.025725+03:00",
+  "main_started_at": "2026-10-18T23:41:43.655172+03:00",
+  "finished_at": "2026-10-18T23:42:21.560662+03:00",
+  "source_hashes": {
+    "lab07_lib.py": "d84b83a878f55e95289d76a788dc9fa84d3249d0d33aa719d9db8d6792fd2698",
+    "lab07_demo.py": "fce7924908adbef63dd5808a800a3c9f5b96c137dc9ebf9d398fc2eb613d95fa"
+  },
+  "limitations": "CUDA convolution algorithms are not forced deterministic; runtime varies. Diagnostic reuses main-series d=2/8 for seeds 101..103."
+}

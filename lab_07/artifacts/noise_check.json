@@ -1,0 +1,14 @@
+{
+  "original": {
+    "background_residual_std": 0.05028563365340233,
+    "clean_psnr_first8": 26.06214714050293
+  },
+  "A_reconstruction": {
+    "background_residual_std": 0.016628224402666092,
+    "clean_psnr_first8": 26.0948486328125
+  },
+  "B_reconstruction": {
+    "background_residual_std": 0.01747371256351471,
+    "clean_psnr_first8": 23.60000991821289
+  }
+}
