@@ -1,0 +1,63 @@
+{
+  "variant": 13,
+  "kind": "disc_noise",
+  "factor": "beta_1_to_8",
+  "configs": {
+    "A": {
+      "d": 8,
+      "beta": 1.0,
+      "interp": "lin",
+      "temp": 1.0,
+      "epochs": 30
+    },
+    "B": {
+      "d": 8,
+      "beta": 8.0,
+      "interp": "lin",
+      "temp": 1.0,
+      "epochs": 30
+    }
+  },
+  "data_seed": 7,
+  "training_seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "pairs_seed": 11,
+  "sampling_seed_rule": "1000+training_seed",
+  "visual_sampling_seed": 5,
+  "n_train": 4096,
+  "n_test": 1024,
+  "n_pairs": 200,
+  "n_samples": 256,
+  "interp_t": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "optimizer": "Adam",
+  "lr": 0.002,
+  "batch": 128,
+  "epochs": 30,
+  "warmup_epochs": 10,
+  "updates_per_model": 960,
+  "dtype": "float32",
+  "noise_sigma": 0.05,
+  "target_recon_sample": "noisy test images",
+  "target_interp": "clean render of interpolated factors",
+  "active_threshold_kl_nat": 0.05,
+  "plan_recorded_at": "2026-10-29T11:54:12.383640+03:00",
+  "main_started_at": "2026-10-29T12:06:57.640203+03:00",
+  "finished_at": "2026-10-29T12:15:28.681215+03:00",
+  "baseline_psnr": 16.7631893157959,
+  "source_hashes": {
+    "lab07_lib.py": "d84b83a878f55e95289d76a788dc9fa84d3249d0d33aa719d9db8d6792fd2698",
+    "lab08_lib.py": "f414c49bd0df4eb3aae1f822b29ef2eb112979afc078b26bc65645fd3f43fe9f",
+    "lab08_demo.py": "8ab781bf6a0e71fb9c007e2a0d88f25f96686aa7fb1237190be9846672865c53",
+    "run_lab08.py": "4e4d7988f05f6801d272cff01da6f9f0e08d4d7e60897d91cde534f8b19b841e"
+  },
+  "limitations": "CPU/GPU kernels and libraries can alter last digits. Five training seeds share one fixed synthetic dataset. Nearest-neighbor PSNR does not assess sample diversity."
+}

@@ -1,0 +1,22 @@
+LR08 | Variant 13 | beta 1 -> 8
+Python 3.11.11 | torch 2.4.1+cpu
+CPU | 4 threads | 30 epochs | warmup 10
+
+METRIC          A        B       DELTA
+recon     23.1183  20.9105   -2.2077
+interp    22.5746  21.9382   -0.6364
+sample    21.3179  21.5538   +0.2358
+r2         0.9076   0.8668   -0.0408
+
+METRIC        s_A    |delta|/s    >2s
+recon      0.5025      4.394    True
+interp     0.5261      1.210    False
+sample     0.4898      0.481    False
+r2         0.0189      2.156    True
+
+Tolerance: PSNR +/-1 dB; R2 +/-0.05
+recon: worse; interp: neutral; sample: neutral; r2: neutral
+Active axes seed101: A=6, B=3
+Seeds: 101 102 103 104 105; data seed: 7
+Repeat seed101 max difference: 0.000000
+Finished MSK: 2026-10-29T12:15:28

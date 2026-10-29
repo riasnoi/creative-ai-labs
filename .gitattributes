@@ -64,3 +64,8 @@ lab_07/src/lab07.ipynb -text
 lab_07/artifacts/run.log -text
 *.npz binary
 *.pt binary
+
+# Exact teaching sources and primary Engee export bytes for LR08.
+lab_08/src/original/** -text
+lab_08/artifacts/run.log -text
+lab_08/artifacts/engee/** -text

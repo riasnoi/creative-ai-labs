@@ -1,0 +1,30 @@
+[
+  {
+    "metric": "recon",
+    "tolerance": 1.0,
+    "delta": -2.2077358245849616,
+    "classification": "ухудшение",
+    "above_2s": true
+  },
+  {
+    "metric": "interp",
+    "tolerance": 1.0,
+    "delta": -0.6363849639892578,
+    "classification": "нейтрально",
+    "above_2s": false
+  },
+  {
+    "metric": "sample",
+    "tolerance": 1.0,
+    "delta": 0.23581161499023295,
+    "classification": "нейтрально",
+    "above_2s": false
+  },
+  {
+    "metric": "r2",
+    "tolerance": 0.05,
+    "delta": -0.040849399566650346,
+    "classification": "нейтрально",
+    "above_2s": true
+  }
+]

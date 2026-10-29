@@ -1,0 +1,17 @@
+{
+  "seed": 101,
+  "kind": "disc_noise",
+  "linear": {
+    "recon": 23.390573501586914,
+    "interp": 22.984867731730144,
+    "sample": 21.648733139038086,
+    "r2": 0.9361843466758728
+  },
+  "spherical": {
+    "recon": 23.390573501586914,
+    "interp": 22.7021001180013,
+    "sample": 21.648733139038086,
+    "r2": 0.9361843466758728
+  },
+  "scope": "Additional same-model check, outside the main beta series."
+}

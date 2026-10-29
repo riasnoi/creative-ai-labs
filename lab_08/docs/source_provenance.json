@@ -1,0 +1,74 @@
+[
+  {
+    "path": "demo_journal/colab_first_check_colab_run_log.md",
+    "bytes": 3791,
+    "sha256": "80690d55bfe41b77e5a8c1d0303bd176f17d5195add9011a848988fecf6cf240",
+    "role": "provided teaching material; not own experimental evidence"
+  },
+  {
+    "path": "demo_journal/comparison_variant01.png",
+    "bytes": 267961,
+    "sha256": "00aea76263fb02fb22eb678f3df39ab74026fa7eb340c6e1bb9a686aebead06d",
+    "role": "provided teaching material; not own experimental evidence"
+  },
+  {
+    "path": "demo_journal/comparison_variant01_colab.png",
+    "bytes": 267280,
+    "sha256": "82636a345cef2c6780fae12fbfc658c4f777756436412ccdee9f99660bae981f",
+    "role": "provided teaching material; not own experimental evidence"
+  },
+  {
+    "path": "demo_journal/engee_run_log.md",
+    "bytes": 7449,
+    "sha256": "8aba6ea0af4d2d6ccc79b8ab20f78096844ae2882da214faec55ea6c05d24913",
+    "role": "provided teaching material; not own experimental evidence"
+  },
+  {
+    "path": "demo_journal/results_30_variants.json",
+    "bytes": 12196,
+    "sha256": "b4beaef251a7de237c310e9043a357b95c50bfafd2962ec905cfa27e3b2b1b8f",
+    "role": "provided teaching material; not own experimental evidence"
+  },
+  {
+    "path": "demo_journal/results_30_variants_colab.json",
+    "bytes": 12179,
+    "sha256": "cab7a9310b384bafe22660d9f6449440638013e415148449ad8304a72a5b6d32",
+    "role": "provided teaching material; not own experimental evidence"
+  },
+  {
+    "path": "src/lab08_demo.py",
+    "bytes": 3067,
+    "sha256": "8ab781bf6a0e71fb9c007e2a0d88f25f96686aa7fb1237190be9846672865c53",
+    "role": "provided teaching material; not own experimental evidence"
+  },
+  {
+    "path": "src/lab08_lib (1).py",
+    "bytes": 8682,
+    "sha256": "f414c49bd0df4eb3aae1f822b29ef2eb112979afc078b26bc65645fd3f43fe9f",
+    "role": "provided teaching material; not own experimental evidence"
+  },
+  {
+    "path": "src/lab08_lib.py",
+    "bytes": 8682,
+    "sha256": "f414c49bd0df4eb3aae1f822b29ef2eb112979afc078b26bc65645fd3f43fe9f",
+    "role": "provided teaching material; not own experimental evidence"
+  },
+  {
+    "path": "src/run_lr08.py",
+    "bytes": 1090,
+    "sha256": "e19ba954db3f5f109afa1efd08381255410bf71c1117192533fe1236876f454f",
+    "role": "provided teaching material; not own experimental evidence"
+  },
+  {
+    "path": "src/original/lab07_lib.py",
+    "bytes": 8679,
+    "sha256": "d84b83a878f55e95289d76a788dc9fa84d3249d0d33aa719d9db8d6792fd2698",
+    "role": "Учебная библиотека из исходного комплекта ЛР07; сохранённая копия lab_07/src/original/lab07_lib.py"
+  },
+  {
+    "path": "docs/Методические_указания.pdf",
+    "bytes": 1487538,
+    "sha256": "163bf7e876fecf77e783eee87648b5d9b87a6261658088287758541f2d4df6fd",
+    "role": "Предоставленная методичка ЛР08, 29 страниц"
+  }
+]
