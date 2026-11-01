@@ -1,0 +1,59 @@
+### Ключевые элементы
+
+1. Научная выставка: созвездие соединённых узлов, графическая иллюстрация, тёмный фон, белые и голубые линии. Ограничение: без логотипов.
+2. Микромир: крупные кристаллы под микроскопом, макрофотография, холодные синие и бирюзовые оттенки. Ограничение: исключить красный и оранжевый.
+3. Космос: туманность и одинокий космический зонд, фотореализм, глубокий синий цвет. Композиция: симметричная.
+4. Спираль ДНК: абстрактная двойная спираль, минималистичная геометрия, светящиеся линии на тёмном фоне. Палитра: ровно три цвета — голубой, фиолетовый, белый.
+5. Энергетика будущего: солнечные панели и ветряные турбины на закате, фотореализм, тёплые закатные оттенки. Композиция: широкая.
+
+### Итоговый JSON
+
+```
+[
+  {
+    "subject": "Constellation of interconnected nodes and delicate lines",
+    "setting": "Dark background for a science exhibition poster",
+    "style": "flat vector illustration",
+    "lighting": "Subtle glowing lines",
+    "palette": ["black", "white", "blue"],
+    "composition": "centered",
+    "avoid": ["logo"]
+  },
+  {
+    "subject": "Large crystalline structures viewed through a microscope",
+    "setting": "Microscopic world with intricate crystal formations",
+    "style": "macro photography",
+    "lighting": "Cool diffused laboratory lighting",
+    "palette": ["blue", "teal", "gray"],
+    "composition": "close-up",
+    "avoid": []
+  },
+  {
+    "subject": "A solitary space probe surrounded by a vast nebula",
+    "setting": "Deep outer space with cosmic clouds",
+    "style": "photorealistic",
+    "lighting": "Soft ethereal nebula glow",
+    "palette": ["blue", "black", "purple"],
+    "composition": "symmetrical",
+    "avoid": []
+  },
+  {
+    "subject": "Abstract DNA double helix with luminous strands",
+    "setting": "Dark background for a science exhibition catalog cover",
+    "style": "minimal geometric",
+    "lighting": "Bright glowing molecular lines",
+    "palette": ["blue", "purple", "white"],
+    "composition": "centered",
+    "avoid": []
+  },
+  {
+    "subject": "Solar panels and wind turbines generating renewable energy",
+    "setting": "Expansive renewable energy landscape at sunset",
+    "style": "photorealistic",
+    "lighting": "Warm golden sunset light",
+    "palette": ["amber", "orange", "blue"],
+    "composition": "wide negative space",
+    "avoid": []
+  }
+]
+```

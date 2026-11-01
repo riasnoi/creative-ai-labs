@@ -1,0 +1,51 @@
+```
+
+[
+  {
+    "subject": "Constellation of interconnected nodes and thin lines",
+    "setting": "Dark scientific exhibition poster background",
+    "style": "flat vector illustration",
+    "lighting": "Subtle glowing lines",
+    "palette": ["black", "white", "blue"],
+    "composition": "centered",
+    "avoid": ["logo"]
+  },
+  {
+    "subject": "Large microscopic crystals with intricate structures",
+    "setting": "Abstract microscopic environment with cool tones",
+    "style": "macro photography",
+    "lighting": "Cool diffused illumination",
+    "palette": ["blue", "teal", "white"],
+    "composition": "close-up",
+    "avoid": []
+  },
+  {
+    "subject": "Colorful cosmic nebula surrounding a solitary space probe",
+    "setting": "Deep blue outer space with distant stars",
+    "style": "photorealistic",
+    "lighting": "Soft ethereal cosmic glow",
+    "palette": ["blue", "purple", "black"],
+    "composition": "symmetrical",
+    "avoid": []
+  },
+  {
+    "subject": "Abstract DNA double helix formed by luminous lines",
+    "setting": "Dark background for scientific exhibition catalog",
+    "style": "minimal geometric",
+    "lighting": "Bright glowing neon lines",
+    "palette": ["blue", "purple", "white"],
+    "composition": "centered",
+    "avoid": []
+  },
+  {
+    "subject": "Solar panels and wind turbines generating renewable energy",
+    "setting": "Expansive futuristic energy landscape at sunset",
+    "style": "photorealistic",
+    "lighting": "Warm golden sunset light",
+    "palette": ["amber", "orange", "blue"],
+    "composition": "wide negative space",
+    "avoid": []
+  }
+]
+
+```

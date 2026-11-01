@@ -1,0 +1,47 @@
+{
+  "recorded_at": "2026-11-01T21:58:56.640613+03:00",
+  "variant": 13,
+  "context": 3,
+  "factor": "style",
+  "prompt_a": "science exhibition poster",
+  "prompt_b": "science exhibition poster, isometric 3D render",
+  "target": "isometric 3D render",
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "steps": 1,
+  "size": [
+    512,
+    512
+  ],
+  "guidance_scale": 0.0,
+  "hypotheses": {
+    "H1": "clip_target increases by more than 2*s_A and by more than 1.0 point",
+    "H2": "clip_subject does not decrease by more than 1.0 point",
+    "H3": "edge and contrast change by no more than 10 percent of mean A",
+    "H4": "K1 >= 0.8 for each approach",
+    "H5": "few-shot K4 >= zero-shot K4 and step K4"
+  },
+  "thresholds": {
+    "clip_target_absolute": 1.0,
+    "clip_subject_absolute": 1.0,
+    "edge_relative": 0.1,
+    "contrast_relative": 0.1
+  },
+  "llm_protocol": {
+    "approaches": [
+      "zero",
+      "few",
+      "step"
+    ],
+    "repetitions": 3,
+    "new_chat_each": true,
+    "search": "disabled by prompt",
+    "manual_response_editing": false
+  },
+  "status": "recorded before experiments"
+}

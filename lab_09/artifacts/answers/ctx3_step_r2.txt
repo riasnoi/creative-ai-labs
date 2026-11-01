@@ -1,0 +1,59 @@
+### Ключевые элементы
+
+1. Научная выставка: созвездие соединённых узлов; плоская векторная иллюстрация; чёрный, белый, голубой; без логотипов.
+2. Микромир: крупные кристаллы под микроскопом; макрофотография; холодные голубые, бирюзовые и белые оттенки; исключить красный и оранжевый цвета.
+3. Космос: туманность и одинокий зонд; 3D-рендер; глубокий синий и чёрный; симметричная композиция; дополнительных запретов нет.
+4. Спираль ДНК: абстрактная двойная спираль; минималистичная геометрия; строго три цвета — голубой, фиолетовый, белый; светящиеся линии на тёмном фоне.
+5. Энергетика будущего: солнечные панели и ветряки; фотореализм; янтарный, оранжевый и синий; закатное освещение, широкая композиция.
+
+### Итоговый JSON-массив
+
+```
+[
+  {
+    "subject": "Constellation of interconnected nodes and glowing lines",
+    "setting": "dark scientific exhibition poster background",
+    "style": "flat vector illustration",
+    "lighting": "subtle luminous glow",
+    "palette": ["black", "white", "blue"],
+    "composition": "centered",
+    "avoid": ["logo"]
+  },
+  {
+    "subject": "Large crystalline structures viewed under a microscope",
+    "setting": "microscopic crystalline environment",
+    "style": "macro photography",
+    "lighting": "cool diffused illumination",
+    "palette": ["blue", "teal", "white"],
+    "composition": "close-up",
+    "avoid": []
+  },
+  {
+    "subject": "Solitary space probe surrounded by a vast nebula",
+    "setting": "deep outer space",
+    "style": "3D render",
+    "lighting": "soft nebular glow",
+    "palette": ["blue", "black"],
+    "composition": "symmetrical",
+    "avoid": []
+  },
+  {
+    "subject": "Abstract DNA double helix formed by glowing lines",
+    "setting": "dark abstract background",
+    "style": "minimal geometric",
+    "lighting": "luminous line glow",
+    "palette": ["blue", "purple", "white"],
+    "composition": "centered",
+    "avoid": []
+  },
+  {
+    "subject": "Solar panels and wind turbines producing renewable energy",
+    "setting": "open landscape at sunset",
+    "style": "photorealistic",
+    "lighting": "warm golden sunset",
+    "palette": ["amber", "orange", "blue"],
+    "composition": "wide negative space",
+    "avoid": []
+  }
+]
+```

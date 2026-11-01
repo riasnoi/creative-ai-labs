@@ -1,0 +1,107 @@
+{
+  "zero": {
+    "k1": 1.0,
+    "k2": 1.0,
+    "k3": 1.0,
+    "k4": 0.8666666666666667,
+    "per_reply": [
+      {
+        "parsed": true,
+        "fenced": true,
+        "n": 5,
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "errors": []
+      },
+      {
+        "parsed": true,
+        "fenced": true,
+        "n": 5,
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "errors": []
+      },
+      {
+        "parsed": true,
+        "fenced": true,
+        "n": 5,
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "errors": []
+      }
+    ]
+  },
+  "few": {
+    "k1": 1.0,
+    "k2": 1.0,
+    "k3": 1.0,
+    "k4": 0.9333333333333333,
+    "per_reply": [
+      {
+        "parsed": true,
+        "fenced": true,
+        "n": 5,
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "errors": []
+      },
+      {
+        "parsed": true,
+        "fenced": true,
+        "n": 5,
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "errors": []
+      },
+      {
+        "parsed": true,
+        "fenced": true,
+        "n": 5,
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "errors": []
+      }
+    ]
+  },
+  "step": {
+    "k1": 1.0,
+    "k2": 1.0,
+    "k3": 1.0,
+    "k4": 0.8666666666666667,
+    "per_reply": [
+      {
+        "parsed": true,
+        "fenced": true,
+        "n": 5,
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "errors": []
+      },
+      {
+        "parsed": true,
+        "fenced": true,
+        "n": 5,
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "errors": []
+      },
+      {
+        "parsed": true,
+        "fenced": true,
+        "n": 5,
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "errors": []
+      }
+    ]
+  }
+}

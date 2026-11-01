@@ -69,3 +69,8 @@ lab_07/artifacts/run.log -text
 lab_08/src/original/** -text
 lab_08/artifacts/run.log -text
 lab_08/artifacts/engee/** -text
+
+# Exact teaching sources and primary responses/logs for LR09.
+lab_09/src/original/** -text
+lab_09/artifacts/answers/** -text
+lab_09/artifacts/engee/** -text

@@ -1,0 +1,30 @@
+{
+  "provided_sources": [
+    {
+      "file": "src/original/demo9_llm.py",
+      "sha256": "0dd037fa4f43803d0ae30be56e56be173bc0189b5438b1a0d2b419e77ede9f22",
+      "byte_length": 1410
+    },
+    {
+      "file": "src/original/lab09_lib.py",
+      "sha256": "cc4d233de574e47a73d2126234ee0b8e9f5d80aa0ed6d4a2fac9748ac0f7b062",
+      "byte_length": 7360
+    },
+    {
+      "file": "src/original/lab09_llm.py",
+      "sha256": "5eabb31fd8ba76f103020177acfb04cdb2127352cbddf22e67f2c0b4835abcb5",
+      "byte_length": 18709
+    },
+    {
+      "file": "src/original/run_lr09.py",
+      "sha256": "a962a37b7cd06caab3b837f37a97ea8d8500271cc528b127844ca127696d2507",
+      "byte_length": 2768
+    },
+    {
+      "file": "src/original/summarize9.py",
+      "sha256": "482d9666607bfad960ce2a2099324057d3851613d13c2eba1c6c9ba6d94bbd15",
+      "byte_length": 1339
+    }
+  ],
+  "changes": "Original files preserved byte for byte; variant-specific runner is separate."
+}

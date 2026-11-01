@@ -1,0 +1,61 @@
+### Ключевые элементы
+
+1. Научная выставка: созвездие соединённых узлов; плоская векторная иллюстрация; чёрный, белый, голубой; без логотипов.
+2. Микромир: крупные кристаллы под микроскопом; макрофотография; холодные голубые и бирюзовые оттенки; исключить красный и оранжевый из палитры.
+3. Космос: туманность и одинокий космический зонд; 3D-визуализация; глубокий синий; симметричная композиция; прямых запретов нет.
+4. ДНК: абстрактная спираль ДНК со светящимися линиями; 3D-визуализация; тёмный фон; строго три цвета — голубой, фиолетовый, белый.
+5. Энергетика будущего: солнечные панели и ветряки на закате; фотореализм; тёплые закатные оттенки; широкая композиция; прямых запретов нет.
+
+### Итоговый JSON
+
+```
+
+[
+  {
+    "subject": "Constellation of interconnected nodes and fine lines",
+    "setting": "Dark scientific exhibition poster background",
+    "style": "flat vector illustration",
+    "lighting": "Subtle luminous lines",
+    "palette": ["black", "white", "blue"],
+    "composition": "centered",
+    "avoid": ["logo"]
+  },
+  {
+    "subject": "Large crystalline structures viewed under a microscope",
+    "setting": "Microscopic field of view",
+    "style": "macro photography",
+    "lighting": "Cool diffused illumination",
+    "palette": ["blue", "teal", "white"],
+    "composition": "close-up",
+    "avoid": []
+  },
+  {
+    "subject": "Expansive nebula surrounding a solitary space probe",
+    "setting": "Deep outer space",
+    "style": "3D render",
+    "lighting": "Soft nebula glow",
+    "palette": ["blue", "black"],
+    "composition": "symmetrical",
+    "avoid": []
+  },
+  {
+    "subject": "Abstract DNA double helix with glowing lines",
+    "setting": "Dark exhibition catalog cover background",
+    "style": "3D render",
+    "lighting": "Radiant glowing lines",
+    "palette": ["blue", "purple", "white"],
+    "composition": "centered",
+    "avoid": []
+  },
+  {
+    "subject": "Solar panels and wind turbines generating renewable energy",
+    "setting": "Expansive futuristic landscape at sunset",
+    "style": "photorealistic",
+    "lighting": "Warm golden sunset",
+    "palette": ["amber", "orange", "blue"],
+    "composition": "wide negative space",
+    "avoid": []
+  }
+]
+
+```

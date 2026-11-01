@@ -1,0 +1,51 @@
+```
+
+[
+  {
+    "subject": "constellation of interconnected scientific nodes",
+    "setting": "dark abstract background",
+    "style": "flat vector illustration",
+    "lighting": "subtle glowing lines",
+    "palette": ["black", "white", "blue"],
+    "composition": "centered",
+    "avoid": ["logo"]
+  },
+  {
+    "subject": "large crystals viewed under a microscope",
+    "setting": "microscopic crystalline environment",
+    "style": "macro photography",
+    "lighting": "cool diffused light",
+    "palette": ["blue", "teal", "white"],
+    "composition": "close-up",
+    "avoid": []
+  },
+  {
+    "subject": "luminous nebula with a solitary space probe",
+    "setting": "deep outer space",
+    "style": "photorealistic",
+    "lighting": "soft cosmic glow",
+    "palette": ["blue", "purple", "black"],
+    "composition": "symmetrical",
+    "avoid": []
+  },
+  {
+    "subject": "abstract DNA double helix with glowing lines",
+    "setting": "dark abstract background",
+    "style": "3D render",
+    "lighting": "luminous neon glow",
+    "palette": ["blue", "purple", "white"],
+    "composition": "centered",
+    "avoid": []
+  },
+  {
+    "subject": "solar panels and wind turbines generating renewable energy",
+    "setting": "open landscape at sunset",
+    "style": "photorealistic",
+    "lighting": "warm golden sunset",
+    "palette": ["orange", "amber", "blue"],
+    "composition": "wide negative space",
+    "avoid": []
+  }
+]
+
+```

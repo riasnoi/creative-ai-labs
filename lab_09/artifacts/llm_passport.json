@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Europe/Moscow UTC+3",
+  "service": "ChatGPT web",
+  "browser": "Safari",
+  "displayed_mode": "High, 3 из 3",
+  "exact_model": "not disclosed in interface",
+  "mode_evidence": "model selection menu displayed High and power 3 of 3; model identifier absent",
+  "context": 3,
+  "repeats_per_approach": 3,
+  "new_chat_each": true,
+  "search": "prohibited in identical task text; no search actions observed",
+  "memory_and_personalization": "not disabled; state not independently controlled",
+  "temperature": "not exposed",
+  "seed": "not exposed",
+  "response_handling": "Copy full response; paste into UTF-8 plain text; no manual corrections",
+  "runs": [
+    {
+      "file": "artifacts/answers/ctx3_zero_r1.txt",
+      "approach": "zero",
+      "repeat": 1,
+      "saved_at": "2026-11-01T22:05:41.839455+03:00",
+      "sha256": "0caac2bb8aa71e69b5a897fa913a13a4a5e97c6f9f5058d5b7b8bf99238c3287",
+      "new_chat": true
+    },
+    {
+      "file": "artifacts/answers/ctx3_zero_r2.txt",
+      "approach": "zero",
+      "repeat": 2,
+      "saved_at": "2026-11-01T22:06:33.479618+03:00",
+      "sha256": "1a039dd6e9191bc4963c3687c2aaa2df976d463a01de34297606923884076dd3",
+      "new_chat": true
+    },
+    {
+      "file": "artifacts/answers/ctx3_zero_r3.txt",
+      "approach": "zero",
+      "repeat": 3,
+      "saved_at": "2026-11-01T22:07:18.124599+03:00",
+      "sha256": "4ebb565c231b364842d84e434da100c4705b300df8d6bbb66647d66d9a255247",
+      "new_chat": true
+    },
+    {
+      "file": "artifacts/answers/ctx3_few_r1.txt",
+      "approach": "few",
+      "repeat": 1,
+      "saved_at": "2026-11-01T22:09:15.969313+03:00",
+      "sha256": "5a99f5cf6baf688594f942bcadd79ff9478221e56cced7c7d7ab06bf200f595a",
+      "new_chat": true
+    },
+    {
+      "file": "artifacts/answers/ctx3_few_r2.txt",
+      "approach": "few",
+      "repeat": 2,
+      "saved_at": "2026-11-01T22:10:06.713035+03:00",
+      "sha256": "72102551de1779e7b3c4bf90f2b20d2c2fde48f3475f9af03f6d087685429962",
+      "new_chat": true
+    },
+    {
+      "file": "artifacts/answers/ctx3_few_r3.txt",
+      "approach": "few",
+      "repeat": 3,
+      "saved_at": "2026-11-01T22:12:30.457755+03:00",
+      "sha256": "e01c1c8f284b45cb4f3f5aa0490ef33cf21c380c75677432db010b545e1b0900",
+      "new_chat": true
+    },
+    {
+      "file": "artifacts/answers/ctx3_step_r1.txt",
+      "approach": "step",
+      "repeat": 1,
+      "saved_at": "2026-11-01T22:13:45.732375+03:00",
+      "sha256": "e64c015765d1f004d558ce704356b0eed65c8d6679479733b570f1c6b35fb1e0",
+      "new_chat": true
+    },
+    {
+      "file": "artifacts/answers/ctx3_step_r2.txt",
+      "approach": "step",
+      "repeat": 2,
+      "saved_at": "2026-11-01T22:15:30.679948+03:00",
+      "sha256": "1ae92c89c1dc12968113b0d0e733269eccaf356d702ee904b59629beaed02e20",
+      "new_chat": true
+    },
+    {
+      "file": "artifacts/answers/ctx3_step_r3.txt",
+      "approach": "step",
+      "repeat": 3,
+      "saved_at": "2026-11-01T22:17:19.389867+03:00",
+      "sha256": "c0fefdbc7f53dcc7fb7f1a258a09679cd562e3b68e522a2556527f0f140f0f3b",
+      "new_chat": true
+    }
+  ]
+}
