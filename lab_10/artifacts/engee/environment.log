@@ -1,0 +1,36 @@
+Engee 26.10.2-H3; account 26.11.1; MSK UTC+3
+1.12.6
+Julia Version 1.12.6
+Commit 703999f32c (2026-08-02 22:16 UTC)
+Build Info:
+  GitLab CI build
+
+    Note: This is an unofficial build, please report bugs to the project
+    responsible for this build and not to the Julia project unless you can
+    reproduce the issue using official builds available at https://julialang.org
+
+Platform Info:
+  OS: Linux (x86_64-linux-gnu)
+  CPU: 112 × Intel(R) Xeon(R) Platinum 8180 CPU @ 2.50GHz
+  WORD_SIZE: 64
+  LLVM: libLLVM-18.1.7 (ORCJIT, skylake-avx512)
+  GC: Built with stock GC
+Threads: 5 default, 3 interactive, 5 GC (on 112 virtual cores)
+Environment:
+  JULIA_LSP_STORE_PATH = /user/lsp_store
+  JULIA_CPU_TARGET = generic;sandybridge,-xsaveopt,clone_all;haswell,-rdrnd,base(1)
+  JULIA_LSP_PORT = 3751
+  JULIA_NUM_PRECOMPILE_TASKS = 8
+  JULIA_PKG_PRECOMPILE_AUTO = 0
+  JULIA_DEPOT_PATH = /user/.packages:/opt/depot/core:/opt/depot/mtl:/opt/depot/demos:/opt/depot/stdlib
+  JULIA_PATH = /usr/local/julia
+  LD_LIBRARY_PATH = /ml-packages/lib/python3.11/site-packages/nvidia/cublas/lib:/ml-packages/lib/python3.11/site-packages/nvidia/cuda_runtime/lib:/ml-packages/lib/python3.11/site-packages/nvidia/cudnn/lib
+  JULIA_PROJECT = /user/.project/
+  JULIA_DA_STORE_PATH = /user/da_store
+  JULIA_PKG_SERVER = http://pkgserver.pkgserver.svc.cluster.local
+  JULIA_NUM_THREADS = 7,1
+  JULIA_DA_PORT = 3752
+  JULIA_DEBUG = BackendLib,AbstractAPI
+3.11.11 (main, Mar 17 2025, 21:02:09) [Clang 20.1.0 ]
+2.4.1+cpu 0.32.2 4.57.6
+112

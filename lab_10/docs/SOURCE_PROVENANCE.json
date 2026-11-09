@@ -1,0 +1,7 @@
+{
+  "method_pdf_sha256": "5239460f7381ccbd83179b5da2cfa198eca841d9315a496d834adde796734515",
+  "source": "Appendix A, PDF pages 30-33",
+  "separate_archive_provided": false,
+  "normalization": "Page numbers removed; PDF hard wraps inside tokens and strings restored; no algorithm or configuration change. Raw extraction preserved.",
+  "reconstructed_sha256": "18948179c1741ee2b7eb93655e2e03801d699d518e67733f1bbde5b0018d1d88"
+}

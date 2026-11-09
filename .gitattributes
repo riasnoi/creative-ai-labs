@@ -74,3 +74,9 @@ lab_08/artifacts/engee/** -text
 lab_09/src/original/** -text
 lab_09/artifacts/answers/** -text
 lab_09/artifacts/engee/** -text
+
+# Exact reconstructed library, official snapshots and primary Engee export for LR10.
+lab_10/src/original/** -text
+lab_10/docs/model_cards/** -text
+lab_10/artifacts/engee/** -text
+lab_10/artifacts/main/** -text

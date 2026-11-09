@@ -1,0 +1,31 @@
+{
+  "registered_at": "2026-11-09T17:28:23.964027+03:00",
+  "variant": 13,
+  "context": 3,
+  "pair": [
+    "turbo",
+    "lcm"
+  ],
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "hypotheses": {
+    "H1": "LCM: delta clip_brief > 0, > 1.0 point and > 2s_A",
+    "H2": "LCM/Turbo time ratio in [1.5, 2.5] (about two times)",
+    "H3": "absolute delta clip_text <= 1.0 point",
+    "H4": "absolute relative deltas edge and contrast <= 10%",
+    "H5": "LCM preferred in at least 3 of 5 blinded pairs"
+  },
+  "practical_thresholds": {
+    "clip_brief": 1.0,
+    "clip_text": 1.0,
+    "edge_relative": 0.1,
+    "contrast_relative": 0.1,
+    "seconds_ratio": 1.5
+  },
+  "blind_criteria": "connected nodes and visible links, dark background, white/cyan lines, balanced composition, no text or logo; human student rating before key disclosure"
+}

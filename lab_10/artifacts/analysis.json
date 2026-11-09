@@ -1,0 +1,102 @@
+{
+  "source_completed_at": "2026-11-09T17:49:43.288461+03:00",
+  "summary": [
+    {
+      "metric": "clip_brief",
+      "A": 21.7191880941391,
+      "s_A": 1.1388090908037778,
+      "B": 23.704248070716858,
+      "delta": 1.9850599765777588,
+      "ratio": 1.7431016248532865,
+      "rule_2s": false,
+      "relative_change": 0.09139660138186405,
+      "practical": true,
+      "classification": "только практический допуск"
+    },
+    {
+      "metric": "clip_text",
+      "A": 14.301513135433197,
+      "s_A": 0.44608517818784565,
+      "B": 14.630860388278961,
+      "delta": 0.32934725284576416,
+      "ratio": 0.7383057517931623,
+      "rule_2s": false,
+      "relative_change": 0.023028839656817762,
+      "practical": false,
+      "classification": "ни один порог"
+    },
+    {
+      "metric": "edge",
+      "A": 0.06744575449693288,
+      "s_A": 0.003092933753149022,
+      "B": 0.00707876585606497,
+      "delta": -0.06036698864086791,
+      "ratio": 19.51771148651542,
+      "rule_2s": true,
+      "relative_change": -0.895045049034378,
+      "practical": true,
+      "classification": "2s и практический допуск"
+    },
+    {
+      "metric": "contrast",
+      "A": 0.19072579835166598,
+      "s_A": 0.009026118577320436,
+      "B": 0.08411364166019508,
+      "delta": -0.1066121566914709,
+      "ratio": 11.81151740675676,
+      "rule_2s": true,
+      "relative_change": -0.5589813104092829,
+      "practical": true,
+      "classification": "2s и практический допуск"
+    },
+    {
+      "metric": "seconds",
+      "A": 20.359328865632413,
+      "s_A": 1.2653233592750173,
+      "B": 43.35445447973907,
+      "delta": 22.995125614106655,
+      "ratio": 18.173319448778688,
+      "rule_2s": true,
+      "relative_change": 1.1294638328144304,
+      "practical": true,
+      "classification": "2s и практический допуск"
+    }
+  ],
+  "paired": [
+    {
+      "seed": 101,
+      "clip_brief_delta": -2.130645513534546,
+      "seconds_ratio": 2.5057570324383898
+    },
+    {
+      "seed": 102,
+      "clip_brief_delta": 3.2246366143226624,
+      "seconds_ratio": 1.990180066364178
+    },
+    {
+      "seed": 103,
+      "clip_brief_delta": 2.4602562189102173,
+      "seconds_ratio": 1.9080844016825844
+    },
+    {
+      "seed": 104,
+      "clip_brief_delta": 2.3733898997306824,
+      "seconds_ratio": 2.0029316094851843
+    },
+    {
+      "seed": 105,
+      "clip_brief_delta": 3.997662663459778,
+      "seconds_ratio": 2.2234273781673797
+    }
+  ],
+  "time_ratio": 2.12946383281443,
+  "p_extreme_5_pairs": 0.0625,
+  "formal_test_performed": false,
+  "thresholds": {
+    "clip_brief": 1.0,
+    "clip_text": 1.0,
+    "edge_relative": 0.1,
+    "contrast_relative": 0.1,
+    "seconds_ratio": 1.5
+  }
+}

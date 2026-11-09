@@ -1,0 +1,6 @@
+This Stability AI Model is licensed under the Stability AI Community License, Copyright © Stability AI Ltd. All Rights Reserved.
+Powered by Stability AI.
+
+This project uses stabilityai/sd-turbo for an educational comparison. Model weights are not distributed. The associated Community License is preserved in docs/model_cards/sd_turbo_LICENSE.md.
+
+LCM_Dreamshaper_v7 is marked MIT in the pinned repository metadata. CLIP is provided by OpenAI under MIT; its notice is preserved in docs/model_cards/clip_LICENSE.

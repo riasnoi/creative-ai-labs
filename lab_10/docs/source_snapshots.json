@@ -1,0 +1,37 @@
+[
+  {
+    "file": "clip_LICENSE",
+    "url": "https://raw.githubusercontent.com/openai/CLIP/main/LICENSE",
+    "accessed": "2026-11-09",
+    "bytes": 1064,
+    "sha256": "987e63b32f6c89ff5160e429458a872ff048e6860b590a3912e938f9da8f14db"
+  },
+  {
+    "file": "lcm_README.md",
+    "url": "https://huggingface.co/SimianLuo/LCM_Dreamshaper_v7/raw/a85df6a8bd976cdd08b4fd8f3b73f229c9e54df5/README.md",
+    "accessed": "2026-11-09",
+    "bytes": 3504,
+    "sha256": "b78632344a635a0e9a5808138959db83acaaf1395fb2e06d6664340cb77779e2"
+  },
+  {
+    "file": "sd_turbo_README.md",
+    "url": "https://huggingface.co/stabilityai/sd-turbo/raw/b261bac6fd2cf515557d5d0707481eafa0485ec2/README.md",
+    "accessed": "2026-11-09",
+    "bytes": 5900,
+    "sha256": "2482ac53e71baf0624ede7aca74122ef60e442360535105cd57bcc9d7138c22e"
+  },
+  {
+    "file": "sd_turbo_LICENSE.md",
+    "url": "https://huggingface.co/stabilityai/sd-turbo/raw/b261bac6fd2cf515557d5d0707481eafa0485ec2/LICENSE.md",
+    "accessed": "2026-11-09",
+    "bytes": 11852,
+    "sha256": "d6f6b1a4dce5c852bd6d7d9482d002baf0ccdb71e662250b73be9eec8764ee8d"
+  },
+  {
+    "file": "clip_README.md",
+    "url": "https://huggingface.co/openai/clip-vit-large-patch14/raw/32bd64288804d66eefd0ccbe215aa642df71cc41/README.md",
+    "accessed": "2026-11-09",
+    "bytes": 7947,
+    "sha256": "de4274ec48590ab3aa1c239720ff55e99a37f4165c117ba3ad7af2b7df72687c"
+  }
+]

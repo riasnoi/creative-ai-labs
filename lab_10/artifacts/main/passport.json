@@ -1,0 +1,116 @@
+{
+  "started_at": "2026-11-09T17:40:09.442382+03:00",
+  "variant": 13,
+  "context": 3,
+  "prompt": "poster concept for a science exhibition, abstract constellation of connected nodes, dark background with white and cyan lines, balanced composition, no text, no logo",
+  "probe": "written text and letters",
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "device": "cpu",
+  "dtype": "float32",
+  "threads": 4,
+  "python": "3.11.11",
+  "platform": "Linux-6.8.0-117-generic-x86_64-with-glibc2.35",
+  "machine": "x86_64",
+  "torch": "2.4.1+cpu",
+  "diffusers": "0.32.2",
+  "transformers": "4.57.6",
+  "numpy": "2.1.3",
+  "scipy": "1.15.2",
+  "pillow": "11.1.0",
+  "cpu_count": 112,
+  "clip_id": "openai/clip-vit-large-patch14",
+  "clip_revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+  "configs": {
+    "turbo": {
+      "repo": "stabilityai/sd-turbo",
+      "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+      "steps": 1,
+      "guidance": 0.0,
+      "size": 512,
+      "note": "дистиллированная SD 2.1, 1 шаг, без управления"
+    },
+    "lcm": {
+      "repo": "SimianLuo/LCM_Dreamshaper_v7",
+      "revision": "a85df6a8bd976cdd08b4fd8f3b73f229c9e54df5",
+      "steps": 4,
+      "guidance": 8.0,
+      "size": 512,
+      "note": "латентная согласованность, 4 шага"
+    }
+  },
+  "hypotheses_sha256": "556c89f734e2e5676a795b90e9a95b2d819e6e4a3f70205c0fca098ddee23796",
+  "library_sha256": "18948179c1741ee2b7eb93655e2e03801d699d518e67733f1bbde5b0018d1d88",
+  "runner_sha256": "bf9efc3811bbdd6b7a29e7996901750fedd25b4ed9265aea01a64f7463afc1c6",
+  "schedulers": {
+    "turbo": {
+      "class": "EulerDiscreteScheduler",
+      "config": {
+        "num_train_timesteps": 1000,
+        "beta_start": 0.00085,
+        "beta_end": 0.012,
+        "beta_schedule": "scaled_linear",
+        "trained_betas": null,
+        "prediction_type": "epsilon",
+        "interpolation_type": "linear",
+        "use_karras_sigmas": false,
+        "use_exponential_sigmas": false,
+        "use_beta_sigmas": false,
+        "sigma_min": null,
+        "sigma_max": null,
+        "timestep_spacing": "trailing",
+        "timestep_type": "discrete",
+        "steps_offset": 1,
+        "rescale_betas_zero_snr": false,
+        "final_sigmas_type": "zero",
+        "_use_default_values": [
+          "use_exponential_sigmas",
+          "final_sigmas_type",
+          "rescale_betas_zero_snr",
+          "use_beta_sigmas"
+        ],
+        "_class_name": "EulerDiscreteScheduler",
+        "_diffusers_version": "0.24.0.dev0",
+        "clip_sample": false,
+        "sample_max_value": 1.0,
+        "set_alpha_to_one": false,
+        "skip_prk_steps": true
+      }
+    },
+    "lcm": {
+      "class": "LCMScheduler",
+      "config": {
+        "num_train_timesteps": 1000,
+        "beta_start": 0.00085,
+        "beta_end": 0.012,
+        "beta_schedule": "scaled_linear",
+        "trained_betas": null,
+        "original_inference_steps": 50,
+        "clip_sample": false,
+        "clip_sample_range": 1.0,
+        "set_alpha_to_one": true,
+        "steps_offset": 1,
+        "prediction_type": "epsilon",
+        "thresholding": false,
+        "dynamic_thresholding_ratio": 0.995,
+        "sample_max_value": 1.0,
+        "timestep_spacing": "leading",
+        "timestep_scaling": 10.0,
+        "rescale_betas_zero_snr": false,
+        "_use_default_values": [
+          "timestep_scaling"
+        ],
+        "_class_name": "LCMScheduler",
+        "_diffusers_version": "0.22.0.dev0"
+      }
+    }
+  },
+  "clip_prompt_tokens": 32,
+  "clip_max_tokens": 77,
+  "completed_at": "2026-11-09T17:49:43.288461+03:00"
+}
